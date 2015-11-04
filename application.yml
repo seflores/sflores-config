@@ -1,0 +1,63 @@
+
+---
+aleph:
+  port:
+    oauth: 18080
+    finance: 18090
+    media: 18100
+    acquisitions: 18110
+    adsales: 18120
+    contentdelivery: 18130
+    depreciation: 18140
+    entities: 18150
+    prebilling: 18160
+    programming: 18170
+    titles: 18180
+
+    commondb: 1521
+
+  frontport:
+    oauth: 18082
+    finance: 18092
+    media: 18102
+    acquisitions: 18112
+    adsales: 18122
+    contentdelivery: 18132
+    depreciation: 18142
+    entities: 18152
+    prebilling: 18162
+    programming: 18172
+    titles: 18182
+
+  db:
+    host: db.turner.dev.redb.ee
+    sid: ALEPHDBD1 
+
+  oauth:
+    context-path: /aleph-oauth
+    uri: http://localhost:${aleph.port.oauth}${aleph.oauth.context-path}
+
+---
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@${aleph.db.host}:${aleph.port.commondb}/${aleph.db.sid}
+    username: admlf 
+    password: ariaxs01 
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+
+  jpa:
+    hibernate.ddl-auto: none
+    show-sql: false
+    database-platform: org.hibernate.dialect.Oracle9Dialect
+
+  oauth2:
+    resource:
+      userInfoUri: ${aleph.oauth.uri}/user
+  auth:
+    serverurl: ${aleph.oauth.uri}/oauth/check_token
+
+---
+management:
+  security:
+    enabled: false
+  context-path: /manage
