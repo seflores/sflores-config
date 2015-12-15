@@ -38,11 +38,17 @@ aleph:
     uri: http://argalephdockertu1:${aleph.port.oauth}${aleph.oauth.context-path}
 
 ---
+ldap:
+  url: ldap://argtbsdc01.turner.com:389
+  mocked: false
+  host: turner.com
+
+---
 spring:
   datasource:
-    url: jdbc:oracle:thin:@argalephdbd1.turner.com:1521/ALEPHDBD1 
-    username: admlf 
-    password: ariaxs01 
+    url: jdbc:oracle:thin:@argalephdbte1.turner.com:1521/ALEPHDBTE1 
+    username: proxy
+    password: proxy123
     driver-class-name: oracle.jdbc.driver.OracleDriver
 
   jpa:

@@ -36,6 +36,11 @@ aleph:
   oauth:
     context-path: /aleph-oauth
     uri: http://localhost:${aleph.port.oauth}${aleph.oauth.context-path}
+---
+ldap:
+  url: ldap://argtbsdc01.turner.com:389
+  mocked: true
+  host: turner.com
 
 ---
 spring:
