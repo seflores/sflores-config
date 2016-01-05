@@ -46,8 +46,8 @@ ldap:
 spring:
   datasource:
     url: jdbc:oracle:thin:@${aleph.db.host}:${aleph.port.commondb}/${aleph.db.sid}
-    username: admlf 
-    password: ariaxs01 
+    username: proxy
+    password: proxy
     driver-class-name: oracle.jdbc.driver.OracleDriver
 
   jpa:
