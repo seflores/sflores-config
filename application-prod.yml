@@ -35,17 +35,17 @@ aleph:
 
   oauth:
     context-path: /aleph-oauth
-    uri: http://localhost:${aleph.port.oauth}${aleph.oauth.context-path}
+    uri: http://argalephdockerprod1:${aleph.port.oauth}${aleph.oauth.context-path}
 ---
 ldap:
   url: ldap://argtbsdc01.turner.com:389
-  mocked: true
+  mocked: false
   host: turner.com
 
 ---
 spring:
   datasource:
-    url: jdbc:oracle:thin:@${aleph.db.host}:${aleph.port.commondb}/${aleph.db.sid}
+    url: jdbc:oracle:thin:@argalephdbd1.turner.com:1521/ALEPHDBD1 
     username: proxy
     password: proxy
     driver-class-name: oracle.jdbc.driver.OracleDriver
