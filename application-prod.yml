@@ -71,4 +71,4 @@ management:
 
 server.tomcat.accessLogEnabled: true
 server.tomcat.accessLogPattern: %h %l %u %t "%r" %s %b %D "%{User-Agent}i"
-server.tomcat.basedir: /home/prod/logs
+server.tomcat.basedir: /logs
