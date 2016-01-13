@@ -69,7 +69,6 @@ management:
 server:
   tomcat:
     accessLogEnabled: true
-    accessLogPattern: %h %l %u %t "%r" %s %b %D
     basedir: /log
     protocol-header: X-Forwarded-Proto
     remote-ip-header: X-Real-IP
