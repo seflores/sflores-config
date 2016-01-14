@@ -34,7 +34,7 @@ aleph:
     sid: ALEPHDBD1 
 
   oauth:
-    context-path: /aleph-oauth
+    context-path: /
     uri: http://oauth.aleph.turner.com
 ---
 ldap:
