@@ -66,6 +66,3 @@ management:
   security:
     enabled: false
   context-path: /manage
----
-encrypt:
-  key: turner-aleph
