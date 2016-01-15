@@ -36,6 +36,9 @@ aleph:
   oauth:
     context-path: 
     uri: http://oauth.aleph.turner.com
+    redis:
+      host: argalephdockerprod1
+      port: 6379
 ---
 ldap:
   url: ldap://argtbsdc01.turner.com:389
