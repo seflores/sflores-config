@@ -50,7 +50,7 @@ spring:
   datasource:
     url: jdbc:oracle:thin:@${aleph.db.host}:${aleph.port.commondb}/${aleph.db.sid}
     username: proxy
-    password: proxy
+    password: '{cipher}84a5bd28f8e321cb5d116ce89899aeda968cc291636e8e1dacdbab4d9ee25215'
     driver-class-name: oracle.jdbc.driver.OracleDriver
 
   jpa:
