@@ -13,6 +13,7 @@ aleph:
     prebilling: 18160
     programming: 18170
     titles: 18180
+    config: 18190
 
     commondb: 1521
 
