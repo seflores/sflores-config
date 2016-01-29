@@ -48,7 +48,7 @@ spring:
   datasource:
     url: jdbc:oracle:thin:@argalephdbd1.turner.com:1521/ALEPHDBD1 
     username: proxy
-    password: '{cipher}572c27eeed4a486c69f1c69f745a28ee83c876127c75fb3d9b697aff40593827'
+    password: proxy
     driver-class-name: oracle.jdbc.driver.OracleDriver
 
   jpa:
