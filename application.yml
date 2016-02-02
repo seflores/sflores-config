@@ -14,6 +14,7 @@ aleph:
     programming: 18170
     titles: 18180
     config: 18190
+    branding: 18200
 
     commondb: 1521
 
@@ -29,6 +30,7 @@ aleph:
     prebilling: 18162
     programming: 18172
     titles: 18182
+    branding: 18202
 
   db:
     host: db.turner.dev.redb.ee
