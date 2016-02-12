@@ -49,9 +49,9 @@ ldap:
 ---
 spring:
   datasource:
-    url: jdbc:oracle:thin:@argalephdbtr1.turner.com:1521/ALEPHDBTR1 
+    url: jdbc:oracle:thin:@argalephdbqa.turner.com:1521/ARGALEPHDBQA 
     username: proxy
-    password: proxy123
+    password: '{cipher}f6993af2237d9a35a16072cd161b6cb28f93ea0bf4008ab4d635a2805ce6cd34'
     driver-class-name: oracle.jdbc.driver.OracleDriver
 
   jpa:
