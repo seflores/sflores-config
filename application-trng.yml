@@ -38,7 +38,7 @@ aleph:
 
   oauth:
     context-path: /aleph-oauth
-    uri: https://trng.oauth.aleph.turner.com
+    uri: http://trng.oauth.aleph.turner.com
     redis: 
       enabled: true
       host: argalephdockertpp1
