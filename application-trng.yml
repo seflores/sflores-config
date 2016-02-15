@@ -41,7 +41,7 @@ aleph:
     uri: http://argalephdockertpp1:${aleph.port.oauth}${aleph.oauth.context-path}
     redis: 
       enabled: true
-      host: localhost
+      host: argalephdockertpp1
       port: 6379
 
 ---
