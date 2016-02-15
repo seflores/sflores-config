@@ -38,10 +38,10 @@ aleph:
 
   oauth:
     context-path: /aleph-oauth
-    uri: http://argalephdockertpp1:${aleph.port.oauth}${aleph.oauth.context-path}
+    uri: http://preprod.oauth.aleph.turner.com
     redis: 
       enabled: true
-      host: localhost
+      host: argalephdockertpp2
       port: 6379
 
 ---
