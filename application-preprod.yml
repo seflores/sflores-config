@@ -55,7 +55,7 @@ spring:
   datasource:
     url: jdbc:oracle:thin:@argalephdbqa.turner.com:1521/ARGALEPHDBQA 
     username: proxy
-    password: '{cipher}f6993af2237d9a35a16072cd161b6cb28f93ea0bf4008ab4d635a2805ce6cd34'
+    password: '{cipher}99e803146a8696911226f21fd6bd751aed363588ff5da31a5fdc602294a16169'
     driver-class-name: oracle.jdbc.driver.OracleDriver
 
   jpa:
@@ -72,5 +72,5 @@ spring:
 ---
 management:
   security:
-    enabled: false
+    enabled: false  
   context-path: /manage
