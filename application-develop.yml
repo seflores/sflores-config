@@ -52,11 +52,15 @@ ldap:
 ---
 spring:
   datasource:
-    type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:oracle:thin:@localhost.turner.com:1521/ALEPHDBD1 
+    url: jdbc:oracle:thin:@localhost.turner.com:1521/ALEPHDBD1
     username: proxy
     password: proxy
-    driver-class-name: oracle.jdbc.driver.OracleDriver
+ #   driver-class-name: oracle.jdbc.driver.OracleDriver
+    poolName: SpringBootHikariCP
+    type: com.zaxxer.hikari.HikariDataSource
+    pool-prepared-statements: true
+    max-open-prepared-statements: 250
+
 
   jpa:
     hibernate.ddl-auto: none
