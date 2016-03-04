@@ -56,7 +56,8 @@ spring:
     url: jdbc:oracle:thin:@argalephdbte1.turner.com:1521/ALEPHDBTE1 
     username: proxy
     password: proxy123
-    driver-class-name: oracle.jdbc.driver.OracleDriver
+   # driver-class-name: oracle.jdbc.driver.OracleDriver
+   type: com.zaxxer.hikari.HikariDataSource
 
   jpa:
     hibernate.ddl-auto: none
