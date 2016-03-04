@@ -57,7 +57,10 @@ spring:
     username: proxy
     password: proxy123
    # driver-class-name: oracle.jdbc.driver.OracleDriver
-   type: com.zaxxer.hikari.HikariDataSource
+    pool-name: SpringBootHikariCP
+    type: com.zaxxer.hikari.HikariDataSource
+    pool-prepared-statements: true
+    max-open-prepared-statements: 250
 
   jpa:
     hibernate.ddl-auto: none
