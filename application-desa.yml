@@ -1,6 +1,6 @@
 
 ---
-loader.:
+loader:
    classLoader: com.turner.spring.infra.classloaders.TransformingClassLoader
    main: org.springframework.boot.SpringApplication
 aleph:

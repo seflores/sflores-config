@@ -1,9 +1,9 @@
 
 ---
-loader.:
+loader:
    classLoader: com.turner.spring.infra.classloaders.TransformingClassLoader
    main: org.springframework.boot.SpringApplication
-   
+
 aleph:
   port:
     oauth: 18080
