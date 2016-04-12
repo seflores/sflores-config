@@ -72,7 +72,7 @@ spring:
     serverurl: ${aleph.oauth.uri}/oauth/check_token
 
   main:
-   sources: com.turner.configuration.LTWConfig
+    sources: com.turner.configuration.LTWConfig
 
 ---
 management:
