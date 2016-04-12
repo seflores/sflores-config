@@ -1,9 +1,5 @@
 
 ---
-loader:
-   classLoader: com.turner.spring.infra.classloaders.TransformingClassLoader
-   main: org.springframework.boot.SpringApplication
-
 aleph:
   port:
     oauth: 18080
@@ -59,7 +55,10 @@ spring:
     url: jdbc:oracle:thin:@${aleph.db.host}:${aleph.port.commondb}/${aleph.db.sid}
     username: proxy
     password: proxy
-    driver-class-name: oracle.jdbc.driver.OracleDriver
+    pool-name: SpringBootHikariCP
+    type: com.zaxxer.hikari.HikariDataSource
+    pool-prepared-statements: true
+    max-open-prepared-statements: 500
 
   jpa:
     hibernate.ddl-auto: none

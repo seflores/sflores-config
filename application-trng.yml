@@ -56,7 +56,10 @@ spring:
     url: jdbc:oracle:thin:@argalephdbtr1.turner.com:1521/ALEPHDBTR1 
     username: proxy
     password: '{cipher}700864f41da798f0bc8dd98e3c2102a6504215c97684d7ac5b2b9f05cea452a6'
-    driver-class-name: oracle.jdbc.driver.OracleDriver
+    pool-name: SpringBootHikariCP
+    type: com.zaxxer.hikari.HikariDataSource
+    pool-prepared-statements: true
+    max-open-prepared-statements: 500
 
   jpa:
     hibernate.ddl-auto: none
