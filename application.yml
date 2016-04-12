@@ -55,6 +55,7 @@ spring:
     url: jdbc:oracle:thin:@${aleph.db.host}:${aleph.port.commondb}/${aleph.db.sid}
     username: proxy
     password: proxy
+    driver-class-name: oracle.jdbc.driver.OracleDriver
     pool-name: SpringBootHikariCP
     type: com.zaxxer.hikari.HikariDataSource
     pool-prepared-statements: true
