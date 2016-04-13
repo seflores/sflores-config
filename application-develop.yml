@@ -53,6 +53,7 @@ ldap:
 spring:
   datasource:
     url: jdbc:oracle:thin:@localhost.turner.com:1521/ALEPHDBD1
+    driver-class-name: oracle.jdbc.driver.OracleDriver
     username: proxy
     password: proxy
     pool-name: SpringBootHikariCP
