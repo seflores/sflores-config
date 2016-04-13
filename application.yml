@@ -60,6 +60,9 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     pool-prepared-statements: true
     max-open-prepared-statements: 500
+    leakDetectionThreshold: 2500
+    maximumPoolSize: 30
+    minimumIdle: 5
 
   jpa:
     hibernate.ddl-auto: none

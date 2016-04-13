@@ -43,6 +43,7 @@ aleph:
       enabled: false
       host: localhost
       port: 6379
+
 ---
 ldap:
   url: ldap://argtbsdc01.turner.com:389
@@ -59,6 +60,10 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     pool-prepared-statements: true
     max-open-prepared-statements: 500
+    leakDetectionThreshold: 2500
+    maximumPoolSize: 30
+    minimumIdle: 5
+
 
   jpa:
     hibernate.ddl-auto: none
