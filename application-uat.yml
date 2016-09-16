@@ -52,7 +52,7 @@ ldap:
 ---
 spring:
   datasource:
-    url: jdbc:oracle:thin:@argalephdbu1:1521/ALEPHDBU1
+    url: jdbc:oracle:thin:@argalephorau1.turner.com:1521/ALEPHU1
     username: proxy
     password: proxy123
     pool-name: SpringBootHikariCP
