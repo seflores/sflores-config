@@ -54,8 +54,8 @@ ldap:
 spring:
   datasource:
     url: jdbc:oracle:thin:@argalephorad2.turner.com:1521:ALEPHD2 
-    username: proxy
-    password: proxy
+    username: proxy_mig
+    password: proxy_mig
     driver-class-name: oracle.jdbc.driver.OracleDriver
     pool-name: SpringBootHikariCP
     type: com.zaxxer.hikari.HikariDataSource
