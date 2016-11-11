@@ -56,7 +56,7 @@ spring:
     url: jdbc:oracle:thin:@argalephorat1.turner.com:1521:ALEPHT1
     driver-class-name: oracle.jdbc.driver.OracleDriver
     username: proxy_mig
-    password: proxy_mig123
+    password: proxy_mig
     pool-name: SpringBootHikariCP
     type: com.zaxxer.hikari.HikariDataSource
     pool-prepared-statements: true
