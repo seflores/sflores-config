@@ -15,6 +15,7 @@ aleph:
     titles: 18180
     config: 18191
     branding: 18200
+    log: 18220
 
     commondb: 1521
 
@@ -31,6 +32,7 @@ aleph:
     programming: 18172
     titles: 18182
     branding: 18202
+    log: 18222
 
   db:
     host: db.turner.dev.redb.ee
