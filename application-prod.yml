@@ -47,7 +47,7 @@ aleph:
       enabled: true    
       host: argalephdockerprod1
       port: 6379
--------  
+      
   support:
     context-path: /support
     uri: http://support.aleph.turner.com
