@@ -48,7 +48,7 @@ aleph:
       host: localhost
       port: 6379
       
--------  
+  
   support:
     context-path: /support
     uri: http://argalephdockertu2:${aleph.port.support}${aleph.support.context-path}
