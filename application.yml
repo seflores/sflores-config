@@ -47,7 +47,7 @@ aleph:
       enabled: false
       host: localhost
       port: 6379
--------  
+      
   support:
     context-path: /support
     uri: http://localhost:${aleph.port.support}${aleph.support.context-path}
