@@ -16,6 +16,7 @@ aleph:
     config: 18190
     branding: 18200
     log: 18220
+    support: 18230
 
     commondb: 1521
 
@@ -33,6 +34,7 @@ aleph:
     titles: 18182
     branding: 18202
     log: 18222
+    support: 18232
 
   db:
     host: db.turner.dev.redb.ee
@@ -45,6 +47,11 @@ aleph:
       enabled: false
       host: localhost
       port: 6379
+      
+-------  
+  support:
+    context-path: /support
+    uri: http://argalephdockertu2:${aleph.port.support}${aleph.support.context-path}
 ---
 ldap:
   url: ldap://argtbsdc01.turner.com:389
