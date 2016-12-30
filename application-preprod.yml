@@ -47,7 +47,7 @@ aleph:
       enabled: true
       host: argalephdockertpp2
       port: 6379
- -------  
+   
  
   support:
     context-path: /support
