@@ -55,8 +55,8 @@ aleph:
 
 ---
 feign:
-   oauth2:
-     enabled: true
+   hystrix:
+     enabled: false
 ---
 ldap:
   url: ldap://argtbsdc01.turner.com:389
