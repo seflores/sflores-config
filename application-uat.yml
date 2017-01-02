@@ -51,6 +51,7 @@ aleph:
   
   support:
     context-path: /support
+    api-path: /api/v1
     uri: http://argalephdockertu2:${aleph.port.support}${aleph.support.context-path}
 ---
 ldap:
