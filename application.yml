@@ -17,6 +17,7 @@ aleph:
     branding: 18200
     log: 18220
     support: 18230
+    placer: 18240
 
     commondb: 1521
 
@@ -35,6 +36,7 @@ aleph:
     branding: 18202
     log: 18222
     support: 18232
+    placer: 18242
 
   db:
     host: db.turner.dev.redb.ee
