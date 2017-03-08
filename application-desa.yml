@@ -70,13 +70,11 @@ ldap:
 ---
 spring:
   datasource:
-    url: jdbc:oracle:thin:@argalephorad2.turner.com:1521:ALEPHD2 
-    username: proxy_mig
-    password: proxy_mig
+    url: jdbc:oracle:thin:@argalephdbqa.turner.com:1521/ARGALEPHDBQA
     driver-class-name: oracle.jdbc.driver.OracleDriver
+    username: proxy_mig
+    password: M1gPr0xyPr0d!
     pool-name: SpringBootHikariCP
-    type: com.zaxxer.hikari.HikariDataSource
-    pool-prepared-statements: true
     max-open-prepared-statements: 500
     leakDetectionThreshold: 2500
     maximumPoolSize: 30
