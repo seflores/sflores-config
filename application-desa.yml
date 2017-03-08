@@ -69,7 +69,7 @@ ldap:
 
 ---
 spring:
-datasource:
+ datasource:
     url: jdbc:oracle:thin:@argalephorad2.turner.com:1521:ALEPHD2 
     username: proxy_mig
     password: proxy_mig
