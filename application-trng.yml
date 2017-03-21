@@ -16,7 +16,9 @@ aleph:
     config: 18190
     branding: 18200
     log: 18220
-
+    support: 18230
+    placer: 18240
+    eip: 18250
     commondb: 1521
 
   frontport:
