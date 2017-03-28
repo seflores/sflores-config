@@ -64,6 +64,11 @@ aleph:
     context-path: /media
     api-path: /api/v1
     uri: http://argalephdockerd1:${aleph.port.media}${aleph.media.context-path}
+  
+  log:
+    context-path: /log
+    api-path: /api/v1
+    uri: http://argalephdockerd1:${aleph.port.log}${aleph.log.context-path}
 
 ---
 feign:
