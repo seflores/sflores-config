@@ -104,10 +104,9 @@ spring:
     resource:
       userInfoUri: ${aleph.oauth.uri}/user
   auth:
-    serverurl: ${aleph.oauth.uri}/oauth/check_token
-    
-    
- security:
+    serverurl: ${aleph.oauth.uri}/oauth/check_token  
+  
+  security:
     oauth2:
        resource:
             user-info-uri: ${aleph.oauth.uri}/user
