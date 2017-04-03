@@ -111,7 +111,6 @@ security:
      resource:
        user-info-uri: ${aleph.oauth.uri}/user
        token-info-uri: ${aleph.oauth.uri}/oauth/check_token
-       filter-order: 3
   
 
 ---
