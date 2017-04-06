@@ -76,11 +76,8 @@ spring:
     driver-class-name: oracle.jdbc.driver.OracleDriver
     pool-name: SpringBootHikariCP
     type: com.zaxxer.hikari.HikariDataSource
-    pool-prepared-statements: true
-    max-open-prepared-statements: 500
     leakDetectionThreshold: 2500
-    maximumPoolSize: 30
-    minimumIdle: 5
+
 
 
   jpa:
