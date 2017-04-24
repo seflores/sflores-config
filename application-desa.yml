@@ -19,6 +19,7 @@ aleph:
     support: 18230
     placer: 18240
     eip: 18250
+    orders: 18260
     commondb: 1521
 
   frontport:
@@ -37,6 +38,8 @@ aleph:
     log: 18222
     support: 18232
     placer: 18242
+
+    orders: 18262
 
   db:
     host: db.turner.dev.redb.ee
@@ -76,11 +79,8 @@ spring:
     driver-class-name: oracle.jdbc.driver.OracleDriver
     pool-name: SpringBootHikariCP
     type: com.zaxxer.hikari.HikariDataSource
-    pool-prepared-statements: true
-    max-open-prepared-statements: 500
     leakDetectionThreshold: 2500
-    maximumPoolSize: 30
-    minimumIdle: 5
+
 
 
   jpa:
