@@ -90,13 +90,6 @@ spring:
   auth:
     serverurl: ${aleph.oauth.uri}/oauth/check_token
 
-security:
-  oauth2:
-     resource:
-       user-info-uri: ${aleph.oauth.uri}/user
-       token-info-uri: ${aleph.oauth.uri}/oauth/check_token
-       filter-order: 3
-
 ---
 management:
   security:
