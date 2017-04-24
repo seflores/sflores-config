@@ -87,6 +87,7 @@ spring:
   oauth2:
     resource:
       userInfoUri: ${aleph.oauth.uri}/user
+      user-info-uri: ${aleph.oauth.uri}/user
   auth:
     serverurl: ${aleph.oauth.uri}/oauth/check_token
 
