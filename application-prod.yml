@@ -97,6 +97,7 @@ security:
        token-info-uri: ${aleph.oauth.uri}/oauth/check_token
        filter-order: 3
 
+---
 management:
   security:
     enabled: false
