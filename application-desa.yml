@@ -19,7 +19,6 @@ aleph:
     support: 18230
     placer: 18240
     eip: 18250
-    orders: 18260
     commondb: 1521
 
   frontport:
@@ -38,8 +37,6 @@ aleph:
     log: 18222
     support: 18232
     placer: 18242
-
-    orders: 18262
 
   db:
     host: db.turner.dev.redb.ee
@@ -93,7 +90,15 @@ spring:
       userInfoUri: ${aleph.oauth.uri}/user
   auth:
     serverurl: ${aleph.oauth.uri}/oauth/check_token
+---
 
+security:
+  oauth2:
+     resource:
+       user-info-uri: ${aleph.oauth.uri}/user
+       token-info-uri: ${aleph.oauth.uri}/oauth/check_token
+       filter-order: 3
+       
 
 ---
 management:
