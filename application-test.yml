@@ -61,6 +61,16 @@ aleph:
     api-path: /api/v1
     uri: http://argalephdockertu1:${aleph.port.programming}${aleph.programming.context-path}
 
+  media:
+    context-path: /media
+    api-path: /api/v1
+    uri: http://argalephdockertu1:${aleph.port.media}${aleph.media.context-path}
+    
+  log:
+    context-path: /media
+    api-path: /api/v1
+    uri: http://argalephdockertu1:${aleph.port.log}${aleph.log.context-path}
+
 ---
 ldap:
   url: ldap://argtbsdc01.turner.com:389
