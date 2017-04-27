@@ -65,11 +65,16 @@ aleph:
     context-path: /media
     api-path: /api/v1
     uri: http://argalephdockertu1:${aleph.port.media}${aleph.media.context-path}
-    
+  
   log:
-    context-path: /media
+    context-path: /log
     api-path: /api/v1
     uri: http://argalephdockertu1:${aleph.port.log}${aleph.log.context-path}
+
+---
+feign:
+   hystrix:
+     enabled: false
 
 ---
 ldap:
