@@ -76,6 +76,9 @@ aleph:
 feign:
    hystrix:
      enabled: false
+   ribbon:
+      ConnectTimeout: 3000
+      ReadTimeout: 80000
 ---
 ldap:
   url: ldap://argtbsdc01.turner.com:389
