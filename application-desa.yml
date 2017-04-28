@@ -78,7 +78,7 @@ feign:
        isolation:
            strategy: SEMAPHORE
            thread:
-             timeoutInMilliseconds:900000
+             timeoutInMilliseconds:9000000
    ribbon:
       ConnectTimeout: 30000
       ReadTimeout: 80000
