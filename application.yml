@@ -85,8 +85,8 @@ hystrix:
       execution:
         isolation:
           strategy: SEMAPHORE
-          thread:
-            timeoutInMilliseconds:9000000
+        timeout:
+            enabled: false
 ---
 ldap:
   url: ldap://argtbsdc01.turner.com:389
