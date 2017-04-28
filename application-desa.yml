@@ -73,7 +73,10 @@ aleph:
 ---
 feign:
    hystrix:
-     enabled: false
+     enabled: true
+   ribbon:
+      ConnectTimeout: 3000
+      ReadTimeout: 80000
 
 
 ---
