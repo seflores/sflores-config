@@ -74,6 +74,11 @@ aleph:
 feign:
    hystrix:
      enabled: true
+     execution:
+       isolation:
+           strategy: SEMAPHORE
+           thread:
+             timeoutInMilliseconds:90000
    ribbon:
       ConnectTimeout: 3000
       ReadTimeout: 80000
