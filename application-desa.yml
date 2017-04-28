@@ -75,6 +75,8 @@ feign:
    hystrix:
      enabled: true     
 ribbon:
+  eureka:
+        enabled: false
   ConnectTimeout: 30000
   ReadTimeout: 300000
 hystrix:
@@ -83,9 +85,8 @@ hystrix:
       execution:
         isolation:
           strategy: SEMAPHORE
-          thread:
-            timeoutInMilliseconds:9000000
-
+        timeout:
+          enabled: false
 ---
 ldap:
   url: ldap://argtbsdc01.turner.com:389
