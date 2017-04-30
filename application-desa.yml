@@ -86,7 +86,7 @@ hystrix:
         isolation:
           strategy: SEMAPHORE
           semaphore:
-             maxConcurrentRequests: 800          
+             maxConcurrentRequests: 400          
         timeout:
           enabled: false
 ---
