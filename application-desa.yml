@@ -69,7 +69,12 @@ aleph:
     context-path: /log
     api-path: /api/v1
     uri: http://argalephdockerd1:${aleph.port.log}${aleph.log.context-path}
-
+    
+  eip:
+    context-path: /eip
+    api-path: /api/v1
+    uri: http://argalephdockerd1:${aleph.port.eip}${aleph.eip.context-path}
+    
 ---
 feign:
    hystrix:
