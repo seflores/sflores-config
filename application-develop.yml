@@ -49,11 +49,6 @@ aleph:
       host: localhost
       port: 6379
 
-  eip:
-    context-path: /eip
-    api-path: /api/v1
-    uri: http://argalephdockerd1:${aleph.port.eip}${aleph.eip.context-path}
-    
   programming:
     context-path: /programming
     api-path: /api/v1
