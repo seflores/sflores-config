@@ -19,7 +19,7 @@ aleph:
     support: 18230
     placer: 18240
     eip: 18250
-
+    clearproxy: 8080
     commondb: 1521
 
   frontport:
@@ -79,7 +79,7 @@ aleph:
 ---
 feign:
    hystrix:
-     enabled: false
+     enabled: true
 
 ---
 ldap:
