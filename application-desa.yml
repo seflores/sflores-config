@@ -69,6 +69,11 @@ aleph:
     context-path: /log
     api-path: /api/v1
     uri: http://argalephdockerd1:${aleph.port.log}${aleph.log.context-path}
+    
+  clearproxy:
+     context-path: /
+     uri: http://argalephdockerd1:${aleph.port.clearproxy}${aleph.clearproxy.context-path}
+
 
 ---
 feign:
