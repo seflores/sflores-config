@@ -73,7 +73,7 @@ aleph:
   
   clearproxy:
      context-path: /
-     uri: http://argalephdockerd1:${aleph.port.clearproxy}${aleph.clearproxy.context-path}
+     uri: http://argalephdockertu1:${aleph.port.clearproxy}${aleph.clearproxy.context-path}
 
 
 ---
