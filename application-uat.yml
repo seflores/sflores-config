@@ -75,7 +75,22 @@ aleph:
 ---
 feign:
    hystrix:
-     enabled: false
+     enabled: true     
+ribbon:
+  eureka:
+        enabled: false
+  ConnectTimeout: 30000
+  ReadTimeout: 300000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          semaphore:
+             maxConcurrentRequests: 200          
+        timeout:
+           enabled: false
      
 ---
 ldap:
