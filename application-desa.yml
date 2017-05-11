@@ -19,6 +19,7 @@ aleph:
     support: 18230
     placer: 18240
     eip: 18250
+    clearproxy: 8080
     commondb: 1521
 
   frontport:
@@ -59,12 +60,45 @@ aleph:
     context-path: /programming
     api-path: /api/v1
     uri: http://argalephdockerd1:${aleph.port.programming}${aleph.programming.context-path}
-    
 
+  media:
+    context-path: /media
+    api-path: /api/v1
+    uri: http://argalephdockerd1:${aleph.port.media}${aleph.media.context-path}
+  
+  log:
+    context-path: /log
+    api-path: /api/v1
+    uri: http://argalephdockerd1:${aleph.port.log}${aleph.log.context-path}
+    
+  clearproxy:
+     context-path: /
+     uri: http://argalephdockerd1:${aleph.port.clearproxy}${aleph.clearproxy.context-path}
+
+
+---
+feign:
+   hystrix:
+     enabled: true     
+ribbon:
+  eureka:
+        enabled: false
+  ConnectTimeout: 30000
+  ReadTimeout: 300000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          semaphore:
+             maxConcurrentRequests: 200          
+        timeout:
+          enabled: false
 ---
 ldap:
   url: ldap://argtbsdc01.turner.com:389
-  mocked: false
+  mocked: true
   host: turner.com
 
 ---

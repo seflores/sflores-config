@@ -19,7 +19,7 @@ aleph:
     support: 18230
     placer: 18240
     eip: 18250
-
+    clearproxy: 8080
     commondb: 1521
 
   frontport:
@@ -62,6 +62,39 @@ aleph:
     api-path: /api/v1
     uri: http://argalephdockertu2:${aleph.port.programming}${aleph.programming.context-path}
 
+  media:
+    context-path: /media
+    api-path: /api/v1
+    uri: http://argalephdockertu2:${aleph.port.media}${aleph.media.context-path}
+  
+  log:
+    context-path: /log
+    api-path: /api/v1
+    uri: http://argalephdockertu2:${aleph.port.log}${aleph.log.context-path}
+  clearproxy:
+      context-path: /
+      uri: http://argalephdockertu2:${aleph.port.clearproxy}${aleph.clearproxy.context-path}
+
+---
+feign:
+   hystrix:
+     enabled: true     
+ribbon:
+  eureka:
+        enabled: false
+  ConnectTimeout: 30000
+  ReadTimeout: 300000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          semaphore:
+             maxConcurrentRequests: 200          
+        timeout:
+           enabled: false
+     
 ---
 ldap:
   url: ldap://argtbsdc01.turner.com:389
@@ -78,7 +111,10 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     pool-prepared-statements: true
     max-open-prepared-statements: 500
-
+    leakDetectionThreshold: 2500
+    maximumPoolSize: 30
+    minimumIdle: 5
+    
   jpa:
     hibernate.ddl-auto: none
     show-sql: false
@@ -96,10 +132,10 @@ security:
      resource:
        user-info-uri: ${aleph.oauth.uri}/user
        token-info-uri: ${aleph.oauth.uri}/oauth/check_token
-      
+       filter-order: 3
        
 ---
 management:
   security:
-    enabled: true
+    enabled: false
   context-path: /manage

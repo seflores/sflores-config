@@ -85,7 +85,20 @@ aleph:
 ---
 feign:
    hystrix:
-     enabled: false
+     enabled: true     
+ribbon:
+  ConnectTimeout: 30000
+  ReadTimeout: 300000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          semaphore:
+             maxConcurrentRequests: 200
+        timeout:
+            enabled: false
 ---
 ldap:
   url: ldap://argtbsdc01.turner.com:389
