@@ -41,16 +41,16 @@ aleph:
 
   db:
     host: db.turner.dev.redb.ee
-    sid: ALEPHDBD1 
+    sid: ALEPHDBD1
 
   oauth:
     context-path: /aleph-oauth
     uri: http://argalephdockertu1:${aleph.port.oauth}${aleph.oauth.context-path}
-    redis: 
+    redis:
       enabled: false
       host: localhost
       port: 6379
-        
+
   support:
     context-path: /support
     api-path: /api/v1
@@ -65,21 +65,30 @@ aleph:
     context-path: /media
     api-path: /api/v1
     uri: http://argalephdockertu1:${aleph.port.media}${aleph.media.context-path}
-  
+
   log:
     context-path: /log
     api-path: /api/v1
-    uri: http://argalephdockertu1:${aleph.port.log}${aleph.log.context-path} 
-  
+    uri: http://argalephdockertu1:${aleph.port.log}${aleph.log.context-path}
+
   clearproxy:
      context-path: /
      uri: http://argalephdockertu1:${aleph.port.clearproxy}${aleph.clearproxy.context-path}
 
+  adsales:
+    context-path: /adsales
+    api-path: /api/v1
+    uri: http://argalephdockertu1:${aleph.port.adsales}${aleph.adsales.context-path}
+
+  orders:
+    context-path: /orders
+    api-path: /api/v1
+    uri: http://argalephdockertu1:${aleph.port.orders}${aleph.orders.context-path}    
 
 ---
 feign:
    hystrix:
-     enabled: true     
+     enabled: true
 ribbon:
   eureka:
         enabled: false
@@ -92,8 +101,8 @@ hystrix:
         isolation:
           strategy: SEMAPHORE
           semaphore:
-             maxConcurrentRequests: 200          
-        timeout: 
+             maxConcurrentRequests: 200
+        timeout:
              enabled: false
 ---
 ldap:
@@ -127,7 +136,7 @@ spring:
       userInfoUri: ${aleph.oauth.uri}/user
   auth:
     serverurl: ${aleph.oauth.uri}/oauth/check_token
-    
+
 security:
   oauth2:
      resource:

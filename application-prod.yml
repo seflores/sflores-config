@@ -41,16 +41,16 @@ aleph:
 
   db:
     host: db.turner.dev.redb.ee
-    sid: ALEPHDBD1 
+    sid: ALEPHDBD1
 
   oauth:
-    context-path: 
+    context-path:
     uri: http://oauth.aleph.turner.com
     redis:
-      enabled: true    
+      enabled: true
       host: argalephdockerprod1
       port: 6379
-      
+
   support:
     context-path: /support
     api-path: /api/v1
@@ -60,6 +60,16 @@ aleph:
     context-path: /programming
     api-path: /api/v1
     uri: http://argalephdockerprod1:${aleph.port.programming}${aleph.programming.context-path}
+
+  adsales:
+    context-path: /adsales
+    api-path: /api/v1
+    uri: http://argalephdockerprod1:${aleph.port.adsales}${aleph.adsales.context-path}
+
+  orders:
+    context-path: /orders
+    api-path: /api/v1
+    uri: http://argalephdockerprod1:${aleph.port.orders}${aleph.orders.context-path}
 
 ---
 ldap:
@@ -102,4 +112,3 @@ server:
     basedir: /log
     protocol-header: X-Forwarded-Proto
     remote-ip-header: X-Real-IP
-
