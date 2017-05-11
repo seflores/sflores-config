@@ -98,7 +98,7 @@ hystrix:
 ---
 ldap:
   url: ldap://argtbsdc01.turner.com:389
-  mocked: false
+  mocked: true
   host: turner.com
 
 ---
