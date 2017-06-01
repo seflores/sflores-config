@@ -55,8 +55,21 @@ aleph:
   support:
     context-path: /support
     api-path: /api/v1
-    uri: http://support.preprod.aleph.turner.com     
-      
+    uri: http://support.preprod.aleph.turner.com   
+    
+  media:
+    context-path: /media
+    api-path: /api/v1
+    uri: http://media.preprod.aleph.turner.com${aleph.media.context-path}
+
+  log:
+    context-path: /log
+    api-path: /api/v1
+    uri: http://log.preprod.aleph.turner.com${aleph.log.context-path}
+
+  clearproxy:
+      context-path: /
+      uri: http://argalephdockertpp2:${aleph.port.clearproxy}${aleph.clearproxy.context-path}
 
   programming:
     context-path: /programming
