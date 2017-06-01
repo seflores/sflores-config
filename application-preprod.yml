@@ -74,7 +74,7 @@ aleph:
   programming:
     context-path: /programming
     api-path: /api/v1
-    uri: http://argalephdockertpp2:${aleph.port.programming}${aleph.programming.context-path}
+    uri: http://programming.preprod.aleph.turner.com${aleph.programming.context-path}
 
 ---
 ldap:
