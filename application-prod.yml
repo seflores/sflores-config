@@ -55,21 +55,35 @@ aleph:
     context-path: /support
     api-path: /api/v1
     uri: http://support.aleph.turner.com
+    
+  media:
+    context-path: /media
+    api-path: /api/v1
+    uri: http://media.aleph.turner.com${aleph.media.context-path}
+
+  log:
+    context-path: /log
+    api-path: /api/v1
+    uri: http://log.aleph.turner.com${aleph.log.context-path}
+
+  clearproxy:
+      context-path: /
+      uri: http://argalephdockerprod2:${aleph.port.clearproxy}${aleph.clearproxy.context-path}
 
   programming:
     context-path: /programming
     api-path: /api/v1
-    uri: http://argalephdockerprod1:${aleph.port.programming}${aleph.programming.context-path}
+    uri: http://programming.aleph.turner.com${aleph.programming.context-path}
 
   adsales:
     context-path: /adsales
     api-path: /api/v1
-    uri: http://argalephdockerprod1:${aleph.port.adsales}${aleph.adsales.context-path}
+    uri: http://adsales.aleph.tuner.com${aleph.adsales.context-path}
 
   orders:
     context-path: /orders
     api-path: /api/v1
-    uri: http://argalephdockerprod1:${aleph.port.orders}${aleph.orders.context-path}
+    uri: http://orders.aleph.turner.com${aleph.orders.context-path}
 
 ---
 ldap:
