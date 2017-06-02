@@ -45,7 +45,7 @@ aleph:
 
   oauth:
     context-path:
-    uri: http://oauth.aleph.turner.com
+    uri: https://oauth.aleph.turner.com
     redis:
       enabled: true
       host: argalephdockerprod1
@@ -54,36 +54,36 @@ aleph:
   support:
     context-path: /support
     api-path: /api/v1
-    uri: http://support.aleph.turner.com
+    uri: https://support.aleph.turner.com
     
   media:
     context-path: /media
     api-path: /api/v1
-    uri: http://media.aleph.turner.com${aleph.media.context-path}
+    uri: https://media.aleph.turner.com${aleph.media.context-path}
 
   log:
     context-path: /log
     api-path: /api/v1
-    uri: http://log.aleph.turner.com${aleph.log.context-path}
+    uri: https://log.aleph.turner.com${aleph.log.context-path}
 
   clearproxy:
       context-path: /
-      uri: http://argalephdockerprod2:${aleph.port.clearproxy}${aleph.clearproxy.context-path}
+      uri: https://argalephdockerprod2:${aleph.port.clearproxy}${aleph.clearproxy.context-path}
 
   programming:
     context-path: /programming
     api-path: /api/v1
-    uri: http://programming.aleph.turner.com${aleph.programming.context-path}
+    uri: https://programming.aleph.turner.com${aleph.programming.context-path}
 
   adsales:
     context-path: /adsales
     api-path: /api/v1
-    uri: http://adsales.aleph.tuner.com${aleph.adsales.context-path}
+    uri: https://adsales.aleph.tuner.com${aleph.adsales.context-path}
 
   orders:
     context-path: /orders
     api-path: /api/v1
-    uri: http://orders.aleph.turner.com${aleph.orders.context-path}
+    uri: https://orders.aleph.turner.com${aleph.orders.context-path}
 
 ---
 ldap:
