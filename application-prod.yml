@@ -86,6 +86,26 @@ aleph:
     uri: https://orders.aleph.turner.com${aleph.orders.context-path}
 
 ---
+feign:
+   hystrix:
+     enabled: true
+ribbon:
+  eureka:
+        enabled: false
+  ConnectTimeout: 30000
+  ReadTimeout: 300000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          semaphore:
+             maxConcurrentRequests: 300
+        timeout:
+             enabled: false
+
+---
 ldap:
   url: ldap://argtbsdc01.turner.com:389
   mocked: false
@@ -113,6 +133,13 @@ spring:
       userInfoUri: ${aleph.oauth.uri}/user
   auth:
     serverurl: ${aleph.oauth.uri}/oauth/check_token
+
+security:
+  oauth2:
+     resource:
+       user-info-uri: ${aleph.oauth.uri}/user
+       token-info-uri: ${aleph.oauth.uri}/oauth/check_token
+       filter-order: 3
 
 ---
 management:
