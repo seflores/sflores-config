@@ -73,7 +73,7 @@ aleph:
   programming:
     context-path: /programming
     api-path: /api/v1
-    uri: https://programming.aleph.turner.com${aleph.programming.context-path}
+    uri: http://argalephdockerprod1:${aleph.port.programming}${aleph.programming.context-path}
 
   adsales:
     context-path: /adsales
