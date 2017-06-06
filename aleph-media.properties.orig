@@ -1,0 +1,12 @@
+server.port=${aleph.port.media}
+server.contextPath=/media
+server.tomcat.maxThreads=400
+<<<<<<< Updated upstream
+aleph.redisson.client.config.uri=classpath:/redisson-client.yml
+aleph.redisson.cache.config.uri=classpath:/redisson-cache.yml
+=======
+aleph.redisson.client.config.uri=classpath:/redisson-desa-client.yml
+aleph.redisson.cache.config.uri=classpath:/redisson-desa-cache.yml
+>>>>>>> Stashed changes
+
+

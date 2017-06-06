@@ -45,7 +45,7 @@ aleph:
 
   oauth:
     context-path: /aleph-oauth
-    uri: http://argalephdockertu2:${aleph.port.oauth}${aleph.oauth.context-path}
+    uri: http://oauth.uat.aleph.turner.com
     redis:
       enabled: false
       host: localhost
@@ -55,22 +55,22 @@ aleph:
   support:
     context-path: /support
     api-path: /api/v1
-    uri: http://argalephdockertu2:${aleph.port.support}${aleph.support.context-path}
+    uri: http://support.uat.aleph.turner.com${aleph.support.context-path}
 
   programming:
     context-path: /programming
     api-path: /api/v1
-    uri: http://argalephdockertu2:${aleph.port.programming}${aleph.programming.context-path}
+    uri: http://programming.uat.aleph.turner.com${aleph.programming.context-path}
 
   media:
     context-path: /media
     api-path: /api/v1
-    uri: http://argalephdockertu2:${aleph.port.media}${aleph.media.context-path}
+    uri: http://media.uat.aleph.turner.com${aleph.media.context-path}
 
   log:
     context-path: /log
     api-path: /api/v1
-    uri: http://argalephdockertu2:${aleph.port.log}${aleph.log.context-path}
+    uri: http://log.uat.aleph.turner.com${aleph.log.context-path}
 
   clearproxy:
       context-path: /
@@ -79,12 +79,12 @@ aleph:
   adsales:
     context-path: /adsales
     api-path: /api/v1
-    uri: http://argalephdockertu2:${aleph.port.adsales}${aleph.adsales.context-path}
+    uri: http://adsales.uat.aleph.turner.com${aleph.adsales.context-path}
 
   orders:
     context-path: /orders
     api-path: /api/v1
-    uri: http://argalephdockertu2:${aleph.port.orders}${aleph.orders.context-path}
+    uri: http://orders.uat.aleph.turner.com${aleph.orders.context-path}
 
 ---
 feign:

@@ -45,7 +45,7 @@ aleph:
 
   oauth:
     context-path: /aleph-oauth
-    uri: https://oauth.preprod.aleph.turner.com
+    uri: http://oauth.preprod.aleph.turner.com
     redis: 
       enabled: true
       host: argalephdockertpp2
@@ -55,28 +55,28 @@ aleph:
   support:
     context-path: /support
     api-path: /api/v1
-    uri: https://support.preprod.aleph.turner.com   
+    uri: http://support.preprod.aleph.turner.com   
     
   media:
     context-path: /media
     api-path: /api/v1
-    uri: https://media.preprod.aleph.turner.com${aleph.media.context-path}
+    uri: http://media.preprod.aleph.turner.com${aleph.media.context-path}
 
   log:
     context-path: /log
     api-path: /api/v1
-    uri: https://log.preprod.aleph.turner.com${aleph.log.context-path}
+    uri: http://log.preprod.aleph.turner.com${aleph.log.context-path}
 
   clearproxy:
       context-path: /
-      uri: https://argalephdockertpp2:${aleph.port.clearproxy}${aleph.clearproxy.context-path}
+      uri: http://argalephdockertpp2:${aleph.port.clearproxy}${aleph.clearproxy.context-path}
 
   programming:
     context-path: /programming
     api-path: /api/v1
-    uri: https://programming.preprod.aleph.turner.com${aleph.programming.context-path}
+    uri: http://programming.preprod.aleph.turner.com${aleph.programming.context-path}
     
- ---
+---
 feign:
    hystrix:
      enabled: true
