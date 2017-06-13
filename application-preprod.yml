@@ -19,7 +19,7 @@ aleph:
     support: 18230
     placer: 18240
     eip: 18250
-
+    clearproxy: 8080
     commondb: 1521
 
   frontport:
@@ -55,13 +55,46 @@ aleph:
   support:
     context-path: /support
     api-path: /api/v1
-    uri: http://support.preprod.aleph.turner.com     
-      
+    uri: http://support.preprod.aleph.turner.com${aleph.support.context-path}
+    
+  media:
+    context-path: /media
+    api-path: /api/v1
+    uri: http://media.preprod.aleph.turner.com${aleph.media.context-path}
+
+  log:
+    context-path: /log
+    api-path: /api/v1
+    uri: http://log.preprod.aleph.turner.com${aleph.log.context-path}
+
+  clearproxy:
+      context-path: /
+      uri: http://argalephdockertpp2:${aleph.port.clearproxy}${aleph.clearproxy.context-path}
 
   programming:
     context-path: /programming
     api-path: /api/v1
-    uri: http://argalephdockertpp2:${aleph.port.programming}${aleph.programming.context-path}
+    uri: http://programming.preprod.aleph.turner.com${aleph.programming.context-path}
+    
+---
+feign:
+   hystrix:
+     enabled: true
+ribbon:
+  eureka:
+        enabled: false
+  ConnectTimeout: 30000
+  ReadTimeout: 300000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          semaphore:
+             maxConcurrentRequests: 200
+        timeout:
+             enabled: false
 
 ---
 ldap:
@@ -91,6 +124,13 @@ spring:
       userInfoUri: ${aleph.oauth.uri}/user
   auth:
     serverurl: ${aleph.oauth.uri}/oauth/check_token
+    
+security:
+  oauth2:
+     resource:
+       user-info-uri: ${aleph.oauth.uri}/user
+       token-info-uri: ${aleph.oauth.uri}/oauth/check_token
+       filter-order: 3
 
 ---
 management:
