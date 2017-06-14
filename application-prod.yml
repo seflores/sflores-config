@@ -44,17 +44,17 @@ aleph:
     sid: ALEPHDBD1
 
   oauth:
-    context-path:
-    uri: http://oauth.aleph.turner.com
+    context-path: /aleph-oauth
+    uri: https://oauth.aleph.turner.com
     redis:
-      enabled: true
+      enabled: false
       host: argalephdockerprod1
       port: 6379
 
   support:
     context-path: /support
     api-path: /api/v1
-    uri: http://support.aleph.turner.com
+    uri: http://support.aleph.turner.com${aleph.support.context-path}
     
   media:
     context-path: /media
