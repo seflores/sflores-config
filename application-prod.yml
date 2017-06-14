@@ -45,7 +45,7 @@ aleph:
 
   oauth:
     context-path: /aleph-oauth
-    uri: http://oauth.aleph.turner.com
+    uri: https://oauth.aleph.turner.com
     redis:
       enabled: false
       host: argalephdockerprod1
