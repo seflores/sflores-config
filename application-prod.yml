@@ -54,7 +54,7 @@ aleph:
   support:
     context-path: /support
     api-path: /api/v1
-    uri: http://support.aleph.turner.com
+    uri: http://support.aleph.turner.com${aleph.support.context-path}
     
   media:
     context-path: /media
