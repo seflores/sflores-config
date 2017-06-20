@@ -111,7 +111,6 @@ ldap:
   url: ldap://argtbsdc01.turner.com:389
   mocked: false
   host: turner.com
-
 ---
 spring:
   datasource:
@@ -127,6 +126,7 @@ spring:
     maximumPoolSize: 30
     minimumIdle: 5
 
+
   jpa:
     hibernate.ddl-auto: none
     show-sql: false
@@ -137,7 +137,6 @@ spring:
       userInfoUri: ${aleph.oauth.uri}/user
   auth:
     serverurl: ${aleph.oauth.uri}/oauth/check_token
-
 
 security:
   oauth2:
