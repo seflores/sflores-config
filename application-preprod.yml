@@ -40,8 +40,8 @@ aleph:
     placer: 18242
 
   db:
-    host: db.turner.dev.redb.ee
-    sid: ALEPHDBTR1 
+    host: argalephdbqa.turner.com
+    sid: ARGALEPHDBQA 
 
   oauth:
     context-path: /aleph-oauth
