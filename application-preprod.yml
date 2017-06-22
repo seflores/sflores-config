@@ -68,7 +68,7 @@ aleph:
     uri: http://log.preprod.aleph.turner.com${aleph.log.context-path}
 
   clearproxy:
-      context-path: /
+      context-path: /PFT.Clear.TurnerTracker
       uri: http://argalephdockertpp2:${aleph.port.clearproxy}${aleph.clearproxy.context-path}
 
   programming:
