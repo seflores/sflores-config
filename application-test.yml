@@ -72,8 +72,9 @@ aleph:
     uri: http://argalephdockertu1:${aleph.port.log}${aleph.log.context-path}
 
   clearproxy:
+     base: http://argalephdockertu1:${aleph.port.clearproxy}
      context-path: /PFT.Clear.TurnerTracker
-     uri: http://argalephdockertu1:${aleph.port.clearproxy}${aleph.clearproxy.context-path}
+     uri: ${aleph.clearproxy.base}${aleph.clearproxy.context-path}
 
   adsales:
     context-path: /adsales
