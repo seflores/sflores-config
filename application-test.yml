@@ -45,7 +45,7 @@ aleph:
 
   oauth:
     context-path: /aleph-oauth
-    uri: http://oauth.test.aleph.turner.com
+    uri: https://oauth.test.aleph.turner.com
     redis:
       enabled: false
       host: localhost
