@@ -151,3 +151,10 @@ management:
   security:
     enabled: false
   context-path: /manage
+---
+server:
+  tomcat:
+    accessLogEnabled: true
+    basedir: /log
+    protocol-header: X-Forwarded-Proto
+    remote-ip-header: X-Real-IP
