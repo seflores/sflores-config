@@ -47,7 +47,7 @@ aleph:
     context-path: /aleph-oauth
     uri: https://oauth.aleph.turner.com
     redis:
-      enabled: false
+      enabled: true
       host: argalephdockerprod1
       port: 6379
 
@@ -67,9 +67,10 @@ aleph:
     uri: http://log.aleph.turner.com${aleph.log.context-path}
 
   clearproxy:
-      context-path: /
-      uri: http://argalephdockerprod2:${aleph.port.clearproxy}${aleph.clearproxy.context-path}
-
+      base: http://argalephdockerprod2:${aleph.port.clearproxy}
+      context-path: /PFT.Clear.TurnerTrackerProd
+      uri: ${aleph.clearproxy.base}${aleph.clearproxy.context-path}
+      
   programming:
     context-path: /programming
     api-path: /api/v1

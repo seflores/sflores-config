@@ -41,22 +41,22 @@ aleph:
 
   db:
     host: db.turner.dev.redb.ee
-    sid: ALEPHDBTR1
+    sid: ALEPHDBD1 
 
   oauth:
     context-path: /aleph-oauth
     uri: http://oauth.preprod.aleph.turner.com
-    redis:
+    redis: 
       enabled: true
       host: argalephdockertpp2
       port: 6379
-
-
+   
+ 
   support:
     context-path: /support
     api-path: /api/v1
     uri: http://support.preprod.aleph.turner.com${aleph.support.context-path}
-
+    
   media:
     context-path: /media
     api-path: /api/v1
@@ -68,8 +68,9 @@ aleph:
     uri: http://log.preprod.aleph.turner.com${aleph.log.context-path}
 
   clearproxy:
-      context-path: /
-      uri: http://argalephdockertpp2:${aleph.port.clearproxy}${aleph.clearproxy.context-path}
+      base: http://argalephdockertpp2:${aleph.port.clearproxy
+      context-path: /PFT.Clear.TurnerTracker
+      uri: ${aleph.clearproxy.base}${aleph.clearproxy.context-path}
 
   programming:
     context-path: /programming
@@ -110,7 +111,7 @@ ldap:
 ---
 spring:
   datasource:
-    url: jdbc:oracle:thin:@argalephdbqa.turner.com:1521/ARGALEPHDBQA
+    url: jdbc:oracle:thin:@argalephdbqa1:1522:alephqa1
     driver-class-name: oracle.jdbc.driver.OracleDriver
     username: proxy_mig
     password: '{cipher}783e30ff152035b69c85b5901659890accc3e2852eb5abdbdf67feef6ac68184'
@@ -129,7 +130,7 @@ spring:
       userInfoUri: ${aleph.oauth.uri}/user
   auth:
     serverurl: ${aleph.oauth.uri}/oauth/check_token
-
+    
 security:
   oauth2:
      resource:
@@ -140,5 +141,5 @@ security:
 ---
 management:
   security:
-    enabled: false
+    enabled: false  
   context-path: /manage

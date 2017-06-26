@@ -45,7 +45,7 @@ aleph:
 
   oauth:
     context-path: /aleph-oauth
-    uri: http://oauth.test.aleph.turner.com
+    uri: https://oauth.test.aleph.turner.com
     redis:
       enabled: false
       host: localhost
@@ -72,8 +72,9 @@ aleph:
     uri: http://argalephdockertu1:${aleph.port.log}${aleph.log.context-path}
 
   clearproxy:
-     context-path: /
-     uri: http://argalephdockertu1:${aleph.port.clearproxy}${aleph.clearproxy.context-path}
+     base: http://argalephdockertu1:${aleph.port.clearproxy}
+     context-path: /PFT.Clear.TurnerTracker
+     uri: ${aleph.clearproxy.base}${aleph.clearproxy.context-path}
 
   adsales:
     context-path: /adsales
@@ -153,3 +154,10 @@ management:
   security:
     enabled: false
   context-path: /manage
+---  
+server:
+  tomcat:
+    accessLogEnabled: true
+    basedir: /log
+    protocol-header: X-Forwarded-Proto
+    remote-ip-header: X-Real-IP
