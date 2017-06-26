@@ -76,7 +76,12 @@ aleph:
     context-path: /adsales
     api-path: /api/v1
     uri: http://argalephdockerd1:${aleph.port.adsales}${aleph.adsales.context-path}
-  
+
+  placer:
+    context-path: /placer
+    api-path: /api/v1
+    uri: http://argalephdockerd1:${aleph.port.placer}${aleph.placer.context-path}
+
   orders:
     context-path: /orders
     api-path: /api/v1

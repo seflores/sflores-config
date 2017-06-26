@@ -55,7 +55,7 @@ aleph:
     context-path: /support
     api-path: /api/v1
     uri: http://support.aleph.turner.com${aleph.support.context-path}
-    
+
   media:
     context-path: /media
     api-path: /api/v1
@@ -79,6 +79,11 @@ aleph:
     context-path: /adsales
     api-path: /api/v1
     uri: http://adsales.aleph.tuner.com${aleph.adsales.context-path}
+
+  placer:
+    context-path: /placer
+    api-path: /api/v1
+    uri: http://placer.aleph.tuner.com:${aleph.port.placer}${aleph.placer.context-path}
 
   orders:
     context-path: /orders
