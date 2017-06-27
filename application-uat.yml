@@ -45,7 +45,7 @@ aleph:
 
   oauth:
     context-path: /aleph-oauth
-    uri: http://argalephdockertu2:${aleph.port.oauth}${aleph.oauth.context-path}
+    uri: https://oauth.uat.aleph.turner.com${aleph.oauth.context-path}
     redis:
       enabled: false
       host: localhost
@@ -55,7 +55,7 @@ aleph:
   support:
     context-path: /support
     api-path: /api/v1
-    uri: http://argalephdockertu2:${aleph.port.support}${aleph.support.context-path}
+    uri: http://support.uat.aleph.turner.com${aleph.support.context-path}
 
   programming:
     context-path: /programming
@@ -65,7 +65,7 @@ aleph:
   media:
     context-path: /media
     api-path: /api/v1
-    uri: http://argalephdockertu2:${aleph.port.media}${aleph.media.context-path}
+    uri: http://media.uat.aleph.turner.com${aleph.media.context-path}
 
   log:
     context-path: /log
