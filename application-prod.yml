@@ -48,7 +48,7 @@ aleph:
     uri: https://oauth.aleph.turner.com
     redis:
       enabled: true
-      host: argalephdockerprod1
+      host: argalephdockertu2
       port: 6379
 
   support:
