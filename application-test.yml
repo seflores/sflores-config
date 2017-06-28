@@ -84,7 +84,7 @@ aleph:
   placer:
     context-path: /placer
     api-path: /api/v1
-    uri: http://placer.test.aleph.turner.com:${aleph.port.placer}${aleph.placer.context-path}
+    uri: http://placer.test.aleph.turner.com:${aleph.placer.context-path}
 
   orders:
     context-path: /orders
