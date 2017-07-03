@@ -111,7 +111,7 @@ ldap:
 ---
 spring:
   datasource:
-    url: jdbc:oracle:thin:@argalephdbqa1:1522:alephqa1
+    url: jdbc:oracle:thin:@argalephdbqa:1521/alephqa
     driver-class-name: oracle.jdbc.driver.OracleDriver
     username: proxy_mig
     password: '{cipher}783e30ff152035b69c85b5901659890accc3e2852eb5abdbdf67feef6ac68184'
