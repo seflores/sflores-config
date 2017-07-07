@@ -74,7 +74,7 @@ aleph:
   programming:
     context-path: /programming
     api-path: /api/v1
-    uri: http://programming.aleph.turner.com{aleph.programming.context-path}
+    uri: http://programming.aleph.turner.com${aleph.programming.context-path}
 
   adsales:
     context-path: /adsales
