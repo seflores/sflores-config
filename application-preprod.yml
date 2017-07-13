@@ -2,7 +2,7 @@
 ---
 aleph:
   port:
-    oauth: 18081
+    oauth: 18080
     finance: 18091
     media: 18100
     acquisitions: 18110
