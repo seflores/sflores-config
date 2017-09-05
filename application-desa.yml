@@ -127,8 +127,11 @@ spring:
     pool-name: SpringBootHikariCP
     type: com.zaxxer.hikari.HikariDataSource
     leakDetectionThreshold: 2500
-
-
+    maximumPoolSize: 30
+    minimumIdle: 3
+    maxLifetime: 2000000
+    connectionTimeout: 30000
+    idleTimeout: 30000
 
   jpa:
     hibernate.ddl-auto: none
