@@ -74,7 +74,7 @@ aleph:
   clearproxy:
      context-path: /PFT.Clear.TurnerTracker
      api-path-tvc: /TurnerLatam.svc/json
-     api-path-longform: Longform/longformService/staging/
+     api-path-longform: Longform/longformService/staging/v1
      uri: http://argalephdockerd1:${aleph.port.clearproxy}${aleph.clearproxy.context-path}
      
   adsales:
