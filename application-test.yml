@@ -72,9 +72,11 @@ aleph:
     uri: http://argalephdockertu1:${aleph.port.log}${aleph.log.context-path}
 
   clearproxy:
-     base: http://argalephdockertu1:${aleph.port.clearproxy}
-     context-path: /PFT.Clear.TurnerTracker
-     uri: ${aleph.clearproxy.base}${aleph.clearproxy.context-path}
+    base: http://argalephdockertu1:${aleph.port.clearproxy}
+    context-path: /PFT.Clear.TurnerTracker
+    api-path-tvc: /TurnerLatam.svc/json
+    api-path-longform: Longform/longformService/staging/v1
+    uri: ${aleph.clearproxy.base}${aleph.clearproxy.context-path}
 
   adsales:
     context-path: /adsales
