@@ -134,7 +134,6 @@ spring:
     maxLifetime: 2000000
     connectionTimeout: 30000
     idleTimeout: 30000
-    connectionTestQuey=SELECT 1
 
   jpa:
     hibernate.ddl-auto: none
