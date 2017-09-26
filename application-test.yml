@@ -135,8 +135,8 @@ spring:
     maxLifetime: 2000000
     connectionTimeout: 30000
     idleTimeout: 30000
-    jdbc4ConnectionTest=false
-    connectionTestQuey=SELECT 1
+    jdbc4ConnectionTest: false
+    connectionTestQuey: SELECT 1
 
 
   jpa:
