@@ -132,6 +132,9 @@ spring:
     leakDetectionThreshold: 2500
     maximumPoolSize: 30
     minimumIdle: 5
+    maxLifetime: 2000000
+    connectionTimeout: 30000
+    idleTimeout: 30000
 
 
   jpa:
