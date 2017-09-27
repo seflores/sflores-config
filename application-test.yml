@@ -135,7 +135,8 @@ spring:
     maxLifetime: 30000
     connectionTimeout: 30000
     idleTimeout: 30000
-    connectionTestQuey: SELECT 1
+    validationTimeout:5000
+    connectionTestQuery: SELECT 1 FROM DUAL
 
 
   jpa:
