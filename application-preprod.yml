@@ -67,6 +67,11 @@ aleph:
     api-path: /api/v1
     uri: https://log.preprod.aleph.turner.com${aleph.log.context-path}
 
+  branding:
+    context-path: /branding
+    api-path: /api/v1
+    uri: http://branding.preprod.aleph.turner.com${aleph.branding.context-path}
+
   clearproxy:
       context-path: /
       uri: https://argalephdockertpp2:${aleph.port.clearproxy}${aleph.clearproxy.context-path}

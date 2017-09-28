@@ -66,6 +66,11 @@ aleph:
     api-path: /api/v1
     uri: http://log.aleph.turner.com${aleph.log.context-path}
 
+  branding:
+    context-path: /branding
+    api-path: /api/v1
+    uri: http://branding.aleph.turner.com${aleph.branding.context-path}
+
   clearproxy:
       context-path: /
       uri: http://argalephdockerprod2:${aleph.port.clearproxy}${aleph.clearproxy.context-path}
