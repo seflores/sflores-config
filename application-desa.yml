@@ -77,13 +77,21 @@ aleph:
     uri: http://argalephdockerd1:${aleph.port.branding}${aleph.branding.context-path}
 
   clearproxy:
-     context-path: /
-     uri: http://argalephdockerd1:${aleph.port.clearproxy}${aleph.clearproxy.context-path}
+    base: http://argalephdockerd1:${aleph.port.clearproxy}
+    context-path: /PFT.Clear.TurnerTracker
+    api-path-tvc: /TurnerLatam.svc/json
+    api-path-longform: Longform/longformService/staging/v1
+    uri: ${aleph.clearproxy.base}${aleph.clearproxy.context-path}
 
   adsales:
     context-path: /adsales
     api-path: /api/v1
     uri: http://argalephdockerd1:${aleph.port.adsales}${aleph.adsales.context-path}
+
+  placer:
+    context-path: /placer
+    api-path: /api/v1
+    uri: http://argalephdockerd1:${aleph.port.placer}${aleph.placer.context-path}
 
   orders:
     context-path: /orders
@@ -126,8 +134,11 @@ spring:
     pool-name: SpringBootHikariCP
     type: com.zaxxer.hikari.HikariDataSource
     leakDetectionThreshold: 2500
-
-
+    maximumPoolSize: 30
+    minimumIdle: 3
+    maxLifetime: 2000000
+    connectionTimeout: 30000
+    idleTimeout: 30000
 
   jpa:
     hibernate.ddl-auto: none

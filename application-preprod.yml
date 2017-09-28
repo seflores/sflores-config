@@ -2,7 +2,7 @@
 ---
 aleph:
   port:
-    oauth: 18081
+    oauth: 18080
     finance: 18091
     media: 18100
     acquisitions: 18110
@@ -41,7 +41,7 @@ aleph:
 
   db:
     host: db.turner.dev.redb.ee
-    sid: ALEPHDBTR1 
+    sid: ALEPHDBD1 
 
   oauth:
     context-path: /aleph-oauth
@@ -55,17 +55,17 @@ aleph:
   support:
     context-path: /support
     api-path: /api/v1
-    uri: https://support.preprod.aleph.turner.com   
+    uri: http://support.preprod.aleph.turner.com${aleph.support.context-path}
     
   media:
     context-path: /media
     api-path: /api/v1
-    uri: https://media.preprod.aleph.turner.com${aleph.media.context-path}
+    uri: http://media.preprod.aleph.turner.com${aleph.media.context-path}
 
   log:
     context-path: /log
     api-path: /api/v1
-    uri: https://log.preprod.aleph.turner.com${aleph.log.context-path}
+    uri: http://log.preprod.aleph.turner.com${aleph.log.context-path}
 
   branding:
     context-path: /branding
@@ -73,15 +73,21 @@ aleph:
     uri: http://branding.preprod.aleph.turner.com${aleph.branding.context-path}
 
   clearproxy:
-      context-path: /
-      uri: https://argalephdockertpp2:${aleph.port.clearproxy}${aleph.clearproxy.context-path}
+      base: http://argalephdockertpp2:${aleph.port.clearproxy
+      context-path: /PFT.Clear.TurnerTracker
+      uri: ${aleph.clearproxy.base}${aleph.clearproxy.context-path}
 
   programming:
     context-path: /programming
     api-path: /api/v1
-    uri: https://programming.preprod.aleph.turner.com${aleph.programming.context-path}
-    
- ---
+    uri: http://programming.preprod.aleph.turner.com${aleph.programming.context-path}
+
+  placer:
+    context-path: /placer
+    api-path: /api/v1
+    uri: http://placer.preprod.aleph.turner.com:${aleph.port.placer}${aleph.placer.context-path}
+
+---
 feign:
    hystrix:
      enabled: true
@@ -110,7 +116,7 @@ ldap:
 ---
 spring:
   datasource:
-    url: jdbc:oracle:thin:@argalephdbqa.turner.com:1521/ARGALEPHDBQA
+    url: jdbc:oracle:thin:@argalephdbqa:1521/alephqa
     driver-class-name: oracle.jdbc.driver.OracleDriver
     username: proxy_mig
     password: '{cipher}783e30ff152035b69c85b5901659890accc3e2852eb5abdbdf67feef6ac68184'
@@ -142,3 +148,11 @@ management:
   security:
     enabled: false  
   context-path: /manage
+ 
+---
+server:
+  tomcat:
+    accessLogEnabled: true
+    basedir: /log
+    protocol-header: X-Forwarded-Proto
+    remote-ip-header: X-Real-IP

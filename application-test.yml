@@ -45,16 +45,16 @@ aleph:
 
   oauth:
     context-path: /aleph-oauth
-    uri: http://argalephdockertu1:${aleph.port.oauth}${aleph.oauth.context-path}
+    uri: https://oauth.test.aleph.turner.com
     redis:
       enabled: false
-      host: localhost
+      host: argalephdockertu1
       port: 6379
 
   support:
     context-path: /support
     api-path: /api/v1
-    uri: http://argalephdockertu1:${aleph.port.support}${aleph.support.context-path}
+    uri: http://support.test.aleph.turner.com${aleph.support.context-path}
 
   programming:
     context-path: /programming
@@ -64,7 +64,7 @@ aleph:
   media:
     context-path: /media
     api-path: /api/v1
-    uri: http://argalephdockertu1:${aleph.port.media}${aleph.media.context-path}
+    uri: http://media.test.aleph.turner.com${aleph.media.context-path}
 
   log:
     context-path: /log
@@ -77,18 +77,26 @@ aleph:
     uri: http://argalephdockertu1:${aleph.port.branding}${aleph.branding.context-path}
 
   clearproxy:
-     context-path: /
-     uri: http://argalephdockertu1:${aleph.port.clearproxy}${aleph.clearproxy.context-path}
+    base: http://argalephdockertu1:${aleph.port.clearproxy}
+    context-path: /PFT.Clear.TurnerTracker
+    api-path-tvc: /TurnerLatam.svc/json
+    api-path-longform: Longform/longformService/staging/v1
+    uri: ${aleph.clearproxy.base}${aleph.clearproxy.context-path}
 
   adsales:
     context-path: /adsales
     api-path: /api/v1
     uri: http://argalephdockertu1:${aleph.port.adsales}${aleph.adsales.context-path}
 
+  placer:
+    context-path: /placer
+    api-path: /api/v1
+    uri: http://placer.test.aleph.turner.com:${aleph.placer.context-path}
+
   orders:
     context-path: /orders
     api-path: /api/v1
-    uri: http://argalephdockertu1:${aleph.port.orders}${aleph.orders.context-path}    
+    uri: http://argalephdockertu1:${aleph.port.orders}${aleph.orders.context-path}
 
 ---
 feign:
@@ -129,6 +137,9 @@ spring:
     leakDetectionThreshold: 2500
     maximumPoolSize: 30
     minimumIdle: 5
+    maxLifetime: 30000
+    connectionTimeout: 30000
+    idleTimeout: 30000
 
 
   jpa:
@@ -153,3 +164,10 @@ management:
   security:
     enabled: false
   context-path: /manage
+---  
+server:
+  tomcat:
+    accessLogEnabled: true
+    basedir: /log
+    protocol-header: X-Forwarded-Proto
+    remote-ip-header: X-Real-IP
