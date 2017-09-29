@@ -12,7 +12,7 @@ aleph:
     entities: 18150
     prebilling: 18160
     programming: 18170
-    titles: 18180
+    title: 18180
     config: 18190
     branding: 18200
     log: 18220
@@ -33,7 +33,7 @@ aleph:
     entities: 18152
     prebilling: 18162
     programming: 18172
-    titles: 18182
+    title: 18182
     branding: 18202
     log: 18222
     support: 18232
@@ -51,6 +51,10 @@ aleph:
       host: localhost
       port: 6379
 
+  title:
+    context-path: /title
+    api-path: /api/v1
+    uri: http://title.uat.aleph.turner.com${aleph.title.context-path}
 
   support:
     context-path: /support
