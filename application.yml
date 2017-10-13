@@ -19,6 +19,7 @@ aleph:
     support: 18230
     placer: 18240
     orders: 18260
+    vod: 18270
 
     commondb: 1521
 
@@ -39,6 +40,7 @@ aleph:
     support: 18232
     placer: 18242
     orders: 18262
+    orders: 18272
 
   db:
     host: db.turner.dev.redb.ee
