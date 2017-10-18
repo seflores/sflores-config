@@ -95,6 +95,11 @@ aleph:
     context-path: /placer
     api-path: /api/v1
     uri: http://argalephdockerd1:${aleph.port.placer}${aleph.placer.context-path}
+    
+  vod:
+    context-path: /vod
+    api-path: /api/v1
+    uri: http://argalephdockerd1:${aleph.port.vod}${aleph.vod.context-path}
 
   orders:
     context-path: /orders
