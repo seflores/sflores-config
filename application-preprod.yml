@@ -5,7 +5,7 @@ aleph:
     oauth: 18080
     finance: 18091
     media: 18100
-    acquisitions: 18110
+    rights: 18110
     adsales: 18120
     contentdelivery: 18130
     depreciation: 18140
@@ -26,7 +26,7 @@ aleph:
     oauth: 18082
     finance: 18092
     media: 18102
-    acquisitions: 18112
+    rights: 18112
     adsales: 18122
     contentdelivery: 18132
     depreciation: 18142
