@@ -154,6 +154,8 @@ management:
   context-path: /manage
  
 ---
+logging.config=classpath:logback.xml
+---
 server:
   tomcat:
     accessLogEnabled: true
