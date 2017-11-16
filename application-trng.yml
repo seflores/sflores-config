@@ -82,3 +82,5 @@ management:
   security:
     enabled: false
   context-path: /manage
+---
+logging.config=classpath:logback.xml
