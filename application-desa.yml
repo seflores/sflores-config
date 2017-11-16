@@ -172,6 +172,8 @@ security:
 
 
 ---
+logging.config=classpath:logback-desa.xml
+---
 management:
   security:
     enabled: false
