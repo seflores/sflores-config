@@ -5,6 +5,7 @@ aleph:
     oauth: 18080
     finance: 18090
     media: 18100
+    rights: 18110
     acquisitions: 18110
     adsales: 18120
     contentdelivery: 18130
@@ -27,6 +28,7 @@ aleph:
     oauth: 18082
     finance: 18092
     media: 18102
+    rights: 18112
     acquisitions: 18112
     adsales: 18122
     contentdelivery: 18132
@@ -78,6 +80,11 @@ aleph:
     context-path: /log
     api-path: /api/v1
     uri: http://argalephdockerd1:${aleph.port.log}${aleph.log.context-path}
+
+  rights:
+    context-path: /rights
+    api-path: /api/v1
+    uri: http://argalephdockerd1:${aleph.port.rights}${aleph.rights.context-path}
 
   clearproxy:
      base: http://argalephdockerd1:${aleph.port.clearproxy}
