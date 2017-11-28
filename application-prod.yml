@@ -80,7 +80,14 @@ aleph:
       base: http://argalephdockerprod2:${aleph.port.clearproxy}
       context-path: /PFT.Clear.TurnerTrackerProd
       uri: ${aleph.clearproxy.base}${aleph.clearproxy.context-path}
-      
+
+  clearproxy:
+    base: http://argalephdockerprod2:${aleph.port.clearproxy}
+    context-path: /PFT.Clear.TurnerTracker
+    api-path-tvc: Prod/TurnerLatam.svc/json
+    api-path-longform: Longform/longformService/v1
+    uri: ${aleph.clearproxy.base}${aleph.clearproxy.context-path}
+
   programming:
     context-path: /programming
     api-path: /api/v1
@@ -126,6 +133,12 @@ ldap:
   url: ldap://argtbsdc01.turner.com:389
   mocked: false
   host: turner.com
+
+---
+mail:
+  server:
+    host: getsmtp.turner.com
+    port: 25
 
 ---
 spring:
