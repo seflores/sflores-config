@@ -77,11 +77,6 @@ aleph:
     uri: http://branding.aleph.turner.com${aleph.branding.context-path}
 
   clearproxy:
-      base: http://argalephdockerprod2:${aleph.port.clearproxy}
-      context-path: /PFT.Clear.TurnerTrackerProd
-      uri: ${aleph.clearproxy.base}${aleph.clearproxy.context-path}
-
-  clearproxy:
     base: http://argalephdockerprod2:${aleph.port.clearproxy}
     context-path: /PFT.Clear.TurnerTracker
     api-path-tvc: Prod/TurnerLatam.svc/json
