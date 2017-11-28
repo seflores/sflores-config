@@ -118,6 +118,12 @@ ldap:
   host: turner.com
 
 ---
+mail:
+  server:
+    host: getsmtp.turner.com
+    port: 25
+
+---
 spring:
   datasource:
     url: jdbc:oracle:thin:@argalephdbqa:1521/alephqa
