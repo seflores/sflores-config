@@ -130,6 +130,13 @@ ldap:
   url: ldap://argtbsdc01.turner.com:389
   mocked: false
   host: turner.com
+
+---
+mail:
+  server:
+    host: getsmtp.turner.com
+    port: 25
+
 ---
 spring:
   datasource:
