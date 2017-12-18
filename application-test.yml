@@ -76,11 +76,6 @@ aleph:
     api-path: /api/v1
     uri: http://argalephdockertu1:${aleph.port.log}${aleph.log.context-path}
     
-    rights:
-    context-path: /rights
-    api-path: /api/v1
-    uri: http://argalephdockertu1:${aleph.port.rights}${aleph.rights.context-path}
-    
   branding:
     context-path: /branding
     api-path: /api/v1
