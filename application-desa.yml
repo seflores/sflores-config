@@ -111,10 +111,6 @@ aleph:
 feign:
   hystrix:
     enabled: true
-  client:
-    config:
-      default:
-        readTimeout: 5000     
 ribbon:
   eureka:
         enabled: false
