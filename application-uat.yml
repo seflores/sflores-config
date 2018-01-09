@@ -78,6 +78,11 @@ aleph:
     api-path: /api/v1
     uri: http://log.uat.aleph.turner.com${aleph.log.context-path}
 
+  rights:
+    context-path: /rights
+    api-path: /api/v1
+    uri: http://rights.uat.aleph.turner.com${aleph.rights.context-path}
+
   branding:
     context-path: /branding
     api-path: /api/v1
