@@ -121,7 +121,7 @@ hystrix:
           semaphore:
              maxConcurrentRequests: 300
         timeout:
-             enabled: true
+             enabled: false
 
 ---
 ldap:
