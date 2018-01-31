@@ -110,7 +110,7 @@ aleph:
 ---
 feign:
   hystrix:
-    enabled: true
+    enabled: false
 ribbon:
   eureka:
         enabled: false
