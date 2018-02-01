@@ -122,7 +122,6 @@ hystrix:
              maxConcurrentRequests: 20
         timeout:
              enabled: false
-
 ---
 ldap:
   url: ldap://argtbsdc01.turner.com:389
