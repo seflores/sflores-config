@@ -149,7 +149,6 @@ spring:
     maximumPoolSize: 45
     maxLifetime: 2000000
     connectionTimeout: 30000
-    idleTimeout: 30000
 
   jpa:
     hibernate.ddl-auto: none
