@@ -41,7 +41,7 @@ aleph:
 
   db:
     host: db.turner.dev.redb.ee
-    sid: ALEPHDBD1
+    sid: ALEPHDBD1imumI
 
   oauth:
     context-path: /aleph-oauth
@@ -147,7 +147,6 @@ spring:
     max-open-prepared-statements: 500
     leakDetectionThreshold: 2500
     maximumPoolSize: 45
-    minimumIdle: 3
     maxLifetime: 2000000
     connectionTimeout: 30000
     idleTimeout: 30000
