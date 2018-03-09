@@ -92,6 +92,11 @@ aleph:
     context-path: /placer
     api-path: /api/v1
     uri: http://placer.preprod.aleph.turner.com:${aleph.port.placer}${aleph.placer.context-path}
+    
+  prebilling:
+    context-path: /prebilling
+    api-path: /api/v1
+    uri: http://prebilling.preprod.aleph.turner.com:${aleph.port.prebilling}${aleph.prebilling.context-path}
 
 ---
 feign:
