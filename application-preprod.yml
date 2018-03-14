@@ -42,7 +42,10 @@ aleph:
   db:
     host: db.turner.dev.redb.ee
     sid: ALEPHDBD1 
-
+  
+  redis:
+    host: localhost
+    
   oauth:
     context-path: /aleph-oauth
     uri: https://oauth.preprod.aleph.turner.com
