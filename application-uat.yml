@@ -44,7 +44,10 @@ aleph:
   db:
     host: db.turner.dev.redb.ee
     sid: ALEPHDBD1
-
+    
+  redis:
+    host: argalephdockertu2
+    
   oauth:
     context-path: /aleph-oauth
     uri: https://oauth.uat.aleph.turner.com
