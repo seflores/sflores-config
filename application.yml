@@ -21,6 +21,7 @@ aleph:
     placer: 18240
     orders: 18260
     vod: 18270
+    officeService: 18300
 
     commondb: 1521
 
@@ -117,6 +118,10 @@ aleph:
     context-path: /prebilling
     api-path: /api/v1
     uri: http://argalephdockerd1:${aleph.port.prebilling}${aleph.prebilling.context-path}
+
+  officeMail:
+    uri: http://argalephdockerd1:${aleph.port.officeService}
+
 
 ---
 feign:

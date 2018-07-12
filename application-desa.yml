@@ -21,6 +21,7 @@ aleph:
     eip: 18250
     clearproxy: 8080
     commondb: 1521
+    officeService: 18300
 
   frontport:
     oauth: 18082
@@ -115,6 +116,11 @@ aleph:
     context-path: /prebilling
     api-path: /api/v1
     uri: http://argalephdockerd1:${aleph.port.prebilling}${aleph.prebilling.context-path}
+
+  officeMail:
+    uri: http://argalephdockerd1:${aleph.port.officeService}
+
+
 ---
 feign:
   hystrix:
