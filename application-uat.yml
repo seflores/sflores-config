@@ -198,3 +198,11 @@ server:
     basedir: /log
     protocol-header: X-Forwarded-Proto
     remote-ip-header: X-Real-IP
+
+
+archiving:
+  datasource:
+    url: jdbc:sqlserver://ARGSPPDESA1
+    username: db_bimba
+    password: db_bimba
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
