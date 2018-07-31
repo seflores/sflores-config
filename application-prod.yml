@@ -111,6 +111,9 @@ aleph:
     api-path: /api/v1
     uri: http://prebilling.aleph.turner.com${aleph.prebilling.context-path}
 
+  officeMail:
+    uri: http://argalephdockerprod2:${aleph.port.officeService}
+
 ---
 feign:
    hystrix:

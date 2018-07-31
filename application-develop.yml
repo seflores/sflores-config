@@ -74,6 +74,9 @@ aleph:
     api-path: /api/v1
     uri: http://argalephdockerd1:${aleph.port.prebilling}${aleph.prebilling.context-path}
 
+  officeMail:
+    uri: http://argalephdockerd1:${aleph.port.officeService}
+
 ---
 ldap:
   url: ldap://argtbsdc01.turner.com:389
