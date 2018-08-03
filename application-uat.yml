@@ -118,6 +118,8 @@ aleph:
     api-path: /api/v1
     uri: http://prebilling.uat.aleph.turner.com${aleph.prebilling.context-path}
 
+  officeMail:
+    uri: http://argalephdockertu2:${aleph.port.officeService}
 ---
 feign:
    hystrix:
@@ -198,3 +200,11 @@ server:
     basedir: /log
     protocol-header: X-Forwarded-Proto
     remote-ip-header: X-Real-IP
+
+
+archiving:
+  datasource:
+    url: jdbc:sqlserver://ARGSPPDESA1
+    username: db_bimba
+    password: db_bimba
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver

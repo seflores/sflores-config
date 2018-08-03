@@ -94,12 +94,12 @@ aleph:
   adsales:
     context-path: /adsales
     api-path: /api/v1
-    uri: http://adsales.aleph.tuner.com${aleph.adsales.context-path}
+    uri: http://adsales.aleph.turner.com${aleph.adsales.context-path}
 
   placer:
     context-path: /placer
     api-path: /api/v1
-    uri: http://placer.aleph.tuner.com:${aleph.port.placer}${aleph.placer.context-path}
+    uri: http://placer.aleph.turner.com${aleph.placer.context-path}
 
   orders:
     context-path: /orders
@@ -110,6 +110,9 @@ aleph:
     context-path: /prebilling
     api-path: /api/v1
     uri: http://prebilling.aleph.turner.com${aleph.prebilling.context-path}
+
+  officeMail:
+    uri: http://argalephdockerprod2:${aleph.port.officeService}
 
 ---
 feign:
@@ -188,3 +191,10 @@ server:
     basedir: /log
     protocol-header: X-Forwarded-Proto
     remote-ip-header: X-Real-IP
+
+archiving:
+  datasource:
+    url: jdbc:sqlserver://ARGSPPDESA1
+    username: db_bimba
+    password: db_bimba
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver

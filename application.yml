@@ -188,3 +188,11 @@ management:
   security:
     enabled: false
   context-path: /manage
+
+
+archiving:
+  datasource:
+    url: jdbc:sqlserver://ARGSPPDESA1
+    username: db_bimba
+    password: db_bimba
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
