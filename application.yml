@@ -122,6 +122,9 @@ aleph:
   officeMail:
     uri: http://argalephdockerd1:${aleph.port.officeService}
 
+  predictive:
+    programming:
+      uri: http://argalephdockerdpp:4000/
 
 ---
 feign:
