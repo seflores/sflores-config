@@ -192,7 +192,7 @@ management:
 
 archiving:
   datasource:
-    url: jdbc:sqlserver://ARGSPPDESA1
-    username: db_bimba
-    password: db_bimba
+    url: jdbc:sqlserver://argsppdb01.turner.com:1433;databaseName=DB_BIMBA;
+    username: emea_integration
+    password: k4U89wmrEfbeP5A5P4YE
     driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
