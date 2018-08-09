@@ -19,9 +19,13 @@ aleph:
     support: 18230
     placer: 18240
     eip: 18250
+    eip-mam: 18250
     clearproxy: 8080
-    commondb: 1521
+    orders: 18260
+    vod: 18270
     officeService: 18300
+
+    commondb: 1521
 
   frontport:
     oauth: 18082
@@ -39,6 +43,8 @@ aleph:
     log: 18222
     support: 18232
     placer: 18242
+    orders: 18262
+    vod: 18272
 
   db:
     host: db.turner.dev.redb.ee

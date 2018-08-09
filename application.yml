@@ -6,7 +6,6 @@ aleph:
     finance: 18090
     media: 18100
     rights: 18110
-    acquisitions: 18110
     adsales: 18120
     contentdelivery: 18130
     depreciation: 18140
@@ -19,6 +18,9 @@ aleph:
     log: 18220
     support: 18230
     placer: 18240
+    eip: 18250
+    eip-mam: 18250
+    clearproxy: 8080
     orders: 18260
     vod: 18270
     officeService: 18300
@@ -30,7 +32,6 @@ aleph:
     finance: 18092
     media: 18102
     rights: 18112
-    acquisitions: 18112
     adsales: 18122
     contentdelivery: 18132
     depreciation: 18142
@@ -157,7 +158,7 @@ spring:
     password: proxy_mig
     driver-class-name: oracle.jdbc.driver.OracleDriver
     pool-name: SpringBootHikariCP
-    type: com.zaxxer.hikari.HikariDataSource
+    type: com.zaxxer.hikari.HikariDataSource 
     pool-prepared-statements: true
     max-open-prepared-statements: 500
     leakDetectionThreshold: 2500
