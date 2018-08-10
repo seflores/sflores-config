@@ -20,6 +20,8 @@ aleph:
     placer: 18240
     eip: 18250
     eip-mam: 18250
+    eip-emea: 18251
+    eip-internal: 18252
     clearproxy: 8080
     orders: 18260
     vod: 18270
