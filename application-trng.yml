@@ -7,6 +7,7 @@ aleph:
     media: 18100
     acquisitions: 18110
     adsales: 18120
+    adsales-freetv: 18121
     contentdelivery: 18130
     depreciation: 18140
     entities: 18150
@@ -27,6 +28,7 @@ aleph:
     media: 18102
     acquisitions: 18112
     adsales: 18122
+    adsales-freetv: 18123
     contentdelivery: 18132
     depreciation: 18142
     entities: 18152
