@@ -5,7 +5,7 @@ aleph:
     oauth: 18080
     finance: 18090
     media: 18100
-    acquisitions: 18110
+    rights: 18110
     adsales: 18120
     adsales-freetv: 18121
     contentdelivery: 18130
@@ -20,6 +20,13 @@ aleph:
     support: 18230
     placer: 18240
     eip: 18250
+    eip-mam: 18250
+    eip-emea: 18251
+    eip-internal: 18252
+    clearproxy: 8080
+    orders: 18260
+    vod: 18270
+    officeService: 18300
 
     commondb: 1521
 
@@ -27,7 +34,7 @@ aleph:
     oauth: 18082
     finance: 18092
     media: 18102
-    acquisitions: 18112
+    rights: 18112
     adsales: 18122
     adsales-freetv: 18123
     contentdelivery: 18132
@@ -38,6 +45,10 @@ aleph:
     title: 18182
     branding: 18202
     log: 18222
+    support: 18232
+    placer: 18242
+    orders: 18262
+    vod: 18272
 
   db:
     host: db.turner.dev.redb.ee
@@ -70,6 +81,14 @@ aleph:
     context-path: /title
     api-path: /api/v1
     uri: http://argalephdockerd1:${aleph.port.title}${aleph.title.context-path}
+    
+  prebilling:
+    context-path: /prebilling
+    api-path: /api/v1
+    uri: http://argalephdockerd1:${aleph.port.prebilling}${aleph.prebilling.context-path}
+
+  officeMail:
+    uri: http://argalephdockerd1:${aleph.port.officeService}
 
 ---
 ldap:
@@ -80,7 +99,7 @@ ldap:
 ---
 spring:
   datasource:
-    url: jdbc:oracle:thin:@localhost.turner.com:1521/ALEPHDBD1
+    url: jdbc:oracle:thin:@argalephdockerd1.turner.com:1521/ALEPHDBD1
     driver-class-name: oracle.jdbc.driver.OracleDriver
     username: proxy
     password: proxy

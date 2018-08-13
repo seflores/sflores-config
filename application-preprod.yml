@@ -5,7 +5,7 @@ aleph:
     oauth: 18080
     finance: 18091
     media: 18100
-    acquisitions: 18110
+    rights: 18110
     adsales: 18120
     adsales-freetv: 18121
     contentdelivery: 18130
@@ -27,7 +27,7 @@ aleph:
     oauth: 18082
     finance: 18092
     media: 18102
-    acquisitions: 18112
+    rights: 18112
     adsales: 18122
     adsales-freetv: 18123
     contentdelivery: 18132
@@ -44,7 +44,10 @@ aleph:
   db:
     host: db.turner.dev.redb.ee
     sid: ALEPHDBD1 
-
+  
+  redis:
+    host: localhost
+    
   oauth:
     context-path: /aleph-oauth
     uri: https://oauth.preprod.aleph.turner.com
@@ -79,9 +82,11 @@ aleph:
     uri: http://branding.preprod.aleph.turner.com${aleph.branding.context-path}
 
   clearproxy:
-      base: http://argalephdockertpp2:${aleph.port.clearproxy
-      context-path: /PFT.Clear.TurnerTracker
-      uri: ${aleph.clearproxy.base}${aleph.clearproxy.context-path}
+    base: http://argalephdockertpp2:${aleph.port.clearproxy}
+    context-path: /PFT.Clear.TurnerTracker
+    api-path-tvc: Prod/TurnerLatam.svc/json
+    api-path-longform: Longform/longformService/staging/v1
+    uri: ${aleph.clearproxy.base}${aleph.clearproxy.context-path}
 
   programming:
     context-path: /programming
@@ -91,7 +96,15 @@ aleph:
   placer:
     context-path: /placer
     api-path: /api/v1
-    uri: http://placer.preprod.aleph.turner.com:${aleph.port.placer}${aleph.placer.context-path}
+    uri: http://placer.preprod.aleph.turner.com${aleph.placer.context-path}
+    
+  prebilling:
+    context-path: /prebilling
+    api-path: /api/v1
+    uri: http://prebilling.preprod.aleph.turner.com${aleph.prebilling.context-path}
+
+  officeMail:
+    uri: http://argalephdockertpp2:${aleph.port.officeService}
 
 ---
 feign:
@@ -118,6 +131,12 @@ ldap:
   url: ldap://argtbsdc01.turner.com:389
   mocked: false
   host: turner.com
+
+---
+mail:
+  server:
+    host: getsmtp.turner.com
+    port: 25
 
 ---
 spring:
@@ -155,6 +174,8 @@ management:
     enabled: false  
   context-path: /manage
  
+---
+logging.config=classpath:logback.xml
 ---
 server:
   tomcat:

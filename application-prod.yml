@@ -5,7 +5,7 @@ aleph:
     oauth: 18080
     finance: 18090
     media: 18100
-    acquisitions: 18110
+    rights: 18110
     adsales: 18120
     adsales-freetv: 18121
     contentdelivery: 18130
@@ -27,7 +27,7 @@ aleph:
     oauth: 18082
     finance: 18092
     media: 18102
-    acquisitions: 18112
+    rights: 18112
     adsales: 18122
     adsales-freetv: 18123
     contentdelivery: 18132
@@ -43,8 +43,11 @@ aleph:
 
   db:
     host: db.turner.dev.redb.ee
-    sid: ALEPHDBD1
-
+    sid: ALEPHDBD1imumI
+    
+  redis:
+    host: argalephdockerprod1
+    
   oauth:
     context-path: /aleph-oauth
     uri: https://oauth.aleph.turner.com
@@ -79,10 +82,12 @@ aleph:
     uri: http://branding.aleph.turner.com${aleph.branding.context-path}
 
   clearproxy:
-      base: http://argalephdockerprod2:${aleph.port.clearproxy}
-      context-path: /PFT.Clear.TurnerTrackerProd
-      uri: ${aleph.clearproxy.base}${aleph.clearproxy.context-path}
-      
+    base: http://argalephdockerprod2:${aleph.port.clearproxy}
+    context-path: /PFT.Clear.TurnerTracker
+    api-path-tvc: Prod/TurnerLatam.svc/json
+    api-path-longform: Longform/longformService/v1
+    uri: ${aleph.clearproxy.base}${aleph.clearproxy.context-path}
+
   programming:
     context-path: /programming
     api-path: /api/v1
@@ -91,17 +96,25 @@ aleph:
   adsales:
     context-path: /adsales
     api-path: /api/v1
-    uri: http://adsales.aleph.tuner.com${aleph.adsales.context-path}
+    uri: http://adsales.aleph.turner.com${aleph.adsales.context-path}
 
   placer:
     context-path: /placer
     api-path: /api/v1
-    uri: http://placer.aleph.tuner.com:${aleph.port.placer}${aleph.placer.context-path}
+    uri: http://placer.aleph.turner.com${aleph.placer.context-path}
 
   orders:
     context-path: /orders
     api-path: /api/v1
     uri: http://orders.aleph.turner.com${aleph.orders.context-path}
+    
+  prebilling:
+    context-path: /prebilling
+    api-path: /api/v1
+    uri: http://prebilling.aleph.turner.com${aleph.prebilling.context-path}
+
+  officeMail:
+    uri: http://argalephdockerprod2:${aleph.port.officeService}
 
 ---
 feign:
@@ -122,12 +135,17 @@ hystrix:
              maxConcurrentRequests: 300
         timeout:
              enabled: false
-
 ---
 ldap:
   url: ldap://argtbsdc01.turner.com:389
   mocked: false
   host: turner.com
+
+---
+mail:
+  server:
+    host: getsmtp.turner.com
+    port: 25
 
 ---
 spring:
@@ -142,10 +160,8 @@ spring:
     max-open-prepared-statements: 500
     leakDetectionThreshold: 2500
     maximumPoolSize: 45
-    minimumIdle: 3
     maxLifetime: 2000000
     connectionTimeout: 30000
-    idleTimeout: 30000
 
   jpa:
     hibernate.ddl-auto: none

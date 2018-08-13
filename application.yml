@@ -5,7 +5,7 @@ aleph:
     oauth: 18080
     finance: 18090
     media: 18100
-    acquisitions: 18110
+    rights: 18110
     adsales: 18120
     adsales-freetv: 18121
     contentdelivery: 18130
@@ -19,8 +19,14 @@ aleph:
     log: 18220
     support: 18230
     placer: 18240
+    eip: 18250
+    eip-mam: 18250
+    eip-emea: 18251
+    eip-internal: 18252
+    clearproxy: 8080
     orders: 18260
     vod: 18270
+    officeService: 18300
 
     commondb: 1521
 
@@ -28,7 +34,7 @@ aleph:
     oauth: 18082
     finance: 18092
     media: 18102
-    acquisitions: 18112
+    rights: 18112
     adsales: 18122
     adsales-freetv: 18123
     contentdelivery: 18132
@@ -81,6 +87,11 @@ aleph:
     api-path: /api/v1
     uri: http://argalephdockerd1:${aleph.port.log}${aleph.log.context-path}
 
+  rights:
+    context-path: /rights
+    api-path: /api/v1
+    uri: http://argalephdockerd1:${aleph.port.rights}${aleph.rights.context-path}
+
   clearproxy:
      base: http://argalephdockerd1:${aleph.port.clearproxy}
      context-path: /PFT.Clear.TurnerTracker
@@ -107,6 +118,18 @@ aleph:
     context-path: /orders
     api-path: /api/v1
     uri: http://argalephdockerd1:${aleph.port.orders}${aleph.orders.context-path}
+    
+  prebilling:
+    context-path: /prebilling
+    api-path: /api/v1
+    uri: http://argalephdockerd1:${aleph.port.prebilling}${aleph.prebilling.context-path}
+
+  officeMail:
+    uri: http://argalephdockerd1:${aleph.port.officeService}
+
+  predictive:
+    programming:
+      uri: http://argalephdockerdpp:4000/
 
 ---
 feign:
@@ -139,7 +162,7 @@ spring:
     password: proxy_mig
     driver-class-name: oracle.jdbc.driver.OracleDriver
     pool-name: SpringBootHikariCP
-    type: com.zaxxer.hikari.HikariDataSource
+    type: com.zaxxer.hikari.HikariDataSource 
     pool-prepared-statements: true
     max-open-prepared-statements: 500
     leakDetectionThreshold: 2500
@@ -170,3 +193,11 @@ management:
   security:
     enabled: false
   context-path: /manage
+
+
+archiving:
+  datasource:
+    url: jdbc:sqlserver://argsppdb01.turner.com:1433;databaseName=DB_BIMBA;
+    username: emea_integration
+    password: k4U89wmrEfbeP5A5P4YE
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver

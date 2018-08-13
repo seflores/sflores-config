@@ -5,7 +5,7 @@ aleph:
     oauth: 18080
     finance: 18090
     media: 18100
-    acquisitions: 18110
+    rights: 18110
     adsales: 18120
     adsales-freetv: 18121
     contentdelivery: 18130
@@ -20,6 +20,9 @@ aleph:
     support: 18230
     placer: 18240
     eip: 18250
+    eip-mam: 18250
+    eip-emea: 18251
+    eip-internal: 18252
     clearproxy: 8080
     commondb: 1521
     orders: 18260
@@ -28,7 +31,7 @@ aleph:
     oauth: 18082
     finance: 18092
     media: 18102
-    acquisitions: 18112
+    rights: 18112
     adsales: 18122
     adsales-freetv: 18123
     contentdelivery: 18132
@@ -46,7 +49,10 @@ aleph:
   db:
     host: db.turner.dev.redb.ee
     sid: ALEPHDBD1
-
+    
+  redis:
+    host: argalephdockertu2
+    
   oauth:
     context-path: /aleph-oauth
     uri: https://oauth.uat.aleph.turner.com
@@ -80,16 +86,23 @@ aleph:
     api-path: /api/v1
     uri: http://log.uat.aleph.turner.com${aleph.log.context-path}
 
+  rights:
+    context-path: /rights
+    api-path: /api/v1
+    uri: http://rights.uat.aleph.turner.com${aleph.rights.context-path}
+
   branding:
     context-path: /branding
     api-path: /api/v1
     uri: http://argalephdockertu2:${aleph.port.branding}${aleph.branding.context-path}
 
   clearproxy:
-     base: http://argalephdockertu2:${aleph.port.clearproxy}
-     context-path: /PFT.Clear.TurnerTracker
-     uri: ${aleph.clearproxy.base}${aleph.clearproxy.context-path}
-     
+    base: http://argalephdockertu2:${aleph.port.clearproxy}
+    context-path: /PFT.Clear.TurnerTracker
+    api-path-tvc: /TurnerLatam.svc/json
+    api-path-longform: Longform/longformService/staging/v1
+    uri: ${aleph.clearproxy.base}${aleph.clearproxy.context-path}
+
   adsales:
     context-path: /adsales
     api-path: /api/v1
@@ -104,7 +117,14 @@ aleph:
     context-path: /orders
     api-path: /api/v1
     uri: http://argalephdockertu2:${aleph.port.orders}${aleph.orders.context-path}
+  
+  prebilling:
+    context-path: /prebilling
+    api-path: /api/v1
+    uri: http://prebilling.uat.aleph.turner.com${aleph.prebilling.context-path}
 
+  officeMail:
+    uri: http://argalephdockertu2:${aleph.port.officeService}
 ---
 feign:
    hystrix:
@@ -130,6 +150,13 @@ ldap:
   url: ldap://argtbsdc01.turner.com:389
   mocked: false
   host: turner.com
+
+---
+mail:
+  server:
+    host: getsmtp.turner.com
+    port: 25
+
 ---
 spring:
   datasource:
@@ -169,6 +196,8 @@ management:
   security:
     enabled: false
   context-path: /manage
+---
+logging.config=classpath:logback.xml
 ---
 server:
   tomcat:
