@@ -27,6 +27,7 @@ aleph:
     orders: 18260
     vod: 18270
     officeService: 18300
+    report: 18320
 
     commondb: 1521
 
@@ -49,6 +50,7 @@ aleph:
     placer: 18242
     orders: 18262
     vod: 18272
+    report: 18322
 
   db:
     host: db.turner.dev.redb.ee
@@ -129,6 +131,11 @@ aleph:
 
   officeMail:
     uri: http://argalephdockerd1:${aleph.port.officeService}
+
+  report:
+    context-path: /report
+    api-path: /api/v1
+    uri: http://argalephdockerd1:${aleph.port.report}${aleph.report.context-path}
 
 
 ---
