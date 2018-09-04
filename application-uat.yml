@@ -26,6 +26,7 @@ aleph:
     clearproxy: 8080
     commondb: 1521
     orders: 18260
+    vod: 18270
 
   frontport:
     oauth: 18082
@@ -45,6 +46,7 @@ aleph:
     support: 18232
     placer: 18242
     orders: 18262
+    vod: 18272
 
   db:
     host: db.turner.dev.redb.ee
@@ -107,7 +109,12 @@ aleph:
   adsales:
     context-path: /adsales
     api-path: /api/v1
-    uri: http://argalephdockertu2:${aleph.port.adsales}${aleph.adsales.context-path}
+    uri: http://adsales.uat.aleph.turner.com${aleph.adsales.context-path}
+
+  adsales-freetv:
+    context-path: /adsales
+    api-path: /api/v1
+    uri: http://freetv.uat.aleph.turner.com${aleph.adsales-freetv.context-path}
 
   placer:
     context-path: /placer
@@ -117,7 +124,12 @@ aleph:
   orders:
     context-path: /orders
     api-path: /api/v1
-    uri: http://argalephdockertu2:${aleph.port.orders}${aleph.orders.context-path}
+    uri: http://orders.uat.aleph.turner.com${aleph.orders.context-path}
+
+  vod:
+    context-path: /vod
+    api-path: /api/v1
+    uri: http://vod.uat.aleph.turner.com${aleph.vod.context-path}  
   
   prebilling:
     context-path: /prebilling

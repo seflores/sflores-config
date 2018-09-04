@@ -23,6 +23,8 @@ aleph:
     eip-mam: 18250
     eip-emea: 18251
     eip-internal: 18252
+    orders: 18260
+    vod: 18270
     clearproxy: 8080
     commondb: 1521
 
@@ -43,6 +45,8 @@ aleph:
     log: 18222
     support: 18232
     placer: 18242
+    orders: 18262
+    vod: 18272
 
   db:
     host: db.turner.dev.redb.ee
@@ -105,17 +109,22 @@ aleph:
   adsales:
     context-path: /adsales
     api-path: /api/v1
-    uri: http://argalephdockertu1:${aleph.port.adsales}${aleph.adsales.context-path}
+    uri: http://adsales.test.aleph.turner.com${aleph.adsales.context-path}
+
+  adsales-freetv:
+    context-path: /adsales
+    api-path: /api/v1
+    uri: http://freetv.test.aleph.turner.com${aleph.adsales-freetv.context-path}
 
   placer:
     context-path: /placer
     api-path: /api/v1
-    uri: http://placer.test.aleph.turner.com:${aleph.placer.context-path}
+    uri: http://placer.test.aleph.turner.com${aleph.placer.context-path}
 
   orders:
     context-path: /orders
     api-path: /api/v1
-    uri: http://argalephdockertu1:${aleph.port.orders}${aleph.orders.context-path}
+    uri: http://orders.test.aleph.turner.com${aleph.orders.context-path}
     
   vod:
     context-path: /vod

@@ -22,6 +22,8 @@ aleph:
     eip: 18250
     clearproxy: 8080
     commondb: 1521
+    orders: 18260
+    vod: 18270
 
   frontport:
     oauth: 18082
@@ -40,7 +42,9 @@ aleph:
     log: 18222
     support: 18232
     placer: 18242
-
+    orders: 18262
+    vod: 18272
+    
   db:
     host: db.turner.dev.redb.ee
     sid: ALEPHDBD1 
@@ -94,10 +98,30 @@ aleph:
     api-path: /api/v1
     uri: http://programming.preprod.aleph.turner.com${aleph.programming.context-path}
 
+  adsales:
+    context-path: /adsales
+    api-path: /api/v1
+    uri: http://adsales.preprod.aleph.turner.com${aleph.adsales.context-path}
+
+  adsales-freetv:
+    context-path: /adsales
+    api-path: /api/v1
+    uri: http://freetv.preprod.aleph.turner.com${aleph.adsales-freetv.context-path}
+
   placer:
     context-path: /placer
     api-path: /api/v1
     uri: http://placer.preprod.aleph.turner.com${aleph.placer.context-path}
+
+  orders:
+    context-path: /orders
+    api-path: /api/v1
+    uri: http://orders.preprod.aleph.turner.com$${aleph.orders.context-path}
+
+  vod:
+    context-path: /vod
+    api-path: /api/v1
+    uri: http://vod.preprod.aleph.turner.com${aleph.vod.context-path} 
     
   prebilling:
     context-path: /prebilling

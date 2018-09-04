@@ -105,6 +105,11 @@ aleph:
     api-path: /api/v1
     uri: http://argalephdockerd1:${aleph.port.adsales}${aleph.adsales.context-path}
 
+  adsales-freetv:
+    context-path: /adsales
+    api-path: /api/v1
+    uri: http://argalephdockerd1:${aleph.port.adsales-freetv}${aleph.adsales-freetv.context-path}
+
   placer:
     context-path: /placer
     api-path: /api/v1
