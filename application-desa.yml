@@ -148,6 +148,9 @@ aleph:
     api-path: /api/v1
     uri: http://argalephdockerd1:${aleph.port.report}${aleph.report.context-path}
 
+  predictive:
+    programming:
+      uri: http://argalephdockerdpp:19300/
 
 ---
 feign:

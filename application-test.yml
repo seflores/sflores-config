@@ -138,6 +138,11 @@ aleph:
 
   officeMail:
     uri: http://argalephdockertu1:${aleph.port.officeService}
+
+  predictive:
+    programming:
+      uri: http://argalephdockerdpp:19300/
+
 ---
 feign:
    hystrix:

@@ -105,6 +105,11 @@ aleph:
   officeMail:
     uri: http://argalephdockerd1:${aleph.port.officeService}
 
+
+  predictive:
+    programming:
+      uri: http://argalephdockerdpp:19300/
+
 ---
 ldap:
   url: ldap://argtbsdc01.turner.com:389

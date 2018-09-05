@@ -135,7 +135,7 @@ aleph:
 
   predictive:
     programming:
-      uri: http://argalephdockerdpp:4000/
+      uri: http://argalephdockerdpp:19300/
 
 ---
 feign:
