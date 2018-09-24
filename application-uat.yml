@@ -19,10 +19,10 @@ aleph:
     log: 18220
     support: 18230
     placer: 18240
-    eip: 18250
     eip-mam: 18250
     eip-emea: 18251
     eip-internal: 18252
+    eip-external: 18253
     clearproxy: 8080
     commondb: 1521
     orders: 18260
