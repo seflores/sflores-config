@@ -19,10 +19,10 @@ aleph:
     log: 18220
     support: 18230
     placer: 18240
-    eip: 18250
     eip-mam: 18250
     eip-emea: 18251
     eip-internal: 18252
+    eip-external: 18253
     clearproxy: 8080
     orders: 18260
     vod: 18270
@@ -63,7 +63,7 @@ aleph:
     context-path: /aleph-oauth
     uri: http://argalephdockerd1:${aleph.port.oauth}${aleph.oauth.context-path}
     redis:
-      enabled: false
+      enabled: true
       host: localhost
       port: 6379
 
@@ -148,6 +148,9 @@ aleph:
     api-path: /api/v1
     uri: http://argalephdockerd1:${aleph.port.report}${aleph.report.context-path}
 
+  predictive:
+    programming:
+      uri: http://argalephdockerdpp:19300/
 
 ---
 feign:
