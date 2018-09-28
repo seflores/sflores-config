@@ -20,6 +20,7 @@ aleph:
     support: 18230
     placer: 18240
     eip: 18250
+    report: 18280
     commondb: 1521
 
   frontport:
@@ -37,6 +38,7 @@ aleph:
     titles: 18182
     branding: 18202
     log: 18222
+    report: 18282
 
   db:
     host: db.turner.dev.redb.ee

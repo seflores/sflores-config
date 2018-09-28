@@ -27,6 +27,7 @@ aleph:
     commondb: 1521
     orders: 18260
     vod: 18270
+    report: 18280
 
   frontport:
     oauth: 18082
@@ -47,6 +48,7 @@ aleph:
     placer: 18242
     orders: 18262
     vod: 18272
+    report: 18282
 
   db:
     host: db.turner.dev.redb.ee
