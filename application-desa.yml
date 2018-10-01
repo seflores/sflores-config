@@ -64,7 +64,7 @@ aleph:
     context-path: /aleph-oauth
     uri: http://argalephdockerd1:${aleph.port.oauth}${aleph.oauth.context-path}
     redis:
-      enabled: true
+      enabled: false
       host: localhost
       port: 6379
 
