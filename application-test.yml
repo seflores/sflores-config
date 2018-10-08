@@ -179,7 +179,7 @@ mail:
 ---
 spring:
   datasource:
-    url: jdbc:oracle:thin:@argalephdbprod01.turner.com:1521:ARGALEPHPR
+    url: jdbc:oracle:thin:@argalephorat1.turner.com:1521:ALEPHT1
     driver-class-name: oracle.jdbc.driver.OracleDriver
     username: proxy_mig
     password: proxy_mig
