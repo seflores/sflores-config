@@ -193,7 +193,7 @@ spring:
     maximumPoolSize: 30
     minimumIdle: 5
 
- data:
+  data:
     elasticsearch:
       cluster-nodes: argalephdockerci2:9600
 
