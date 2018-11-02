@@ -195,7 +195,7 @@ spring:
 
  data:
     elasticsearch:
-      cluster-nodes: argalephdockertu2:9300
+      cluster-nodes: argalephdockerci2:9600
 
   jpa:
     hibernate.ddl-auto: none
