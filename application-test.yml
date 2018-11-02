@@ -201,7 +201,7 @@ spring:
 
   data:
     elasticsearch:
-      cluster-nodes: argalephdockertu1:9300 
+      cluster-nodes: argalephdockerci2:9300 
 
   oauth2:
     resource:
