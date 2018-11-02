@@ -183,7 +183,7 @@ spring:
     show-sql: false
     database-platform: org.hibernate.dialect.Oracle9Dialect
 
- data:
+  data:
     elasticsearch:
       cluster-nodes: localhost:9300
 
@@ -198,7 +198,6 @@ security:
      resource:
        user-info-uri: ${aleph.oauth.uri}/user
        token-info-uri: ${aleph.oauth.uri}/oauth/check_token
-
 
 
 ---
