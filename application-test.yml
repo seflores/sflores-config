@@ -194,16 +194,14 @@ spring:
     connectionTimeout: 30000
     idleTimeout: 30000
 
-
   jpa:
     hibernate.ddl-auto: none
     show-sql: false
     database-platform: org.hibernate.dialect.Oracle9Dialect
  
- data:
+  data:
     elasticsearch:
       cluster-nodes: argalephdockertu1:9300
-
 
   oauth2:
     resource:
