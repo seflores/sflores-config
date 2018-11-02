@@ -193,6 +193,9 @@ spring:
     maximumPoolSize: 30
     minimumIdle: 5
 
+ data:
+    elasticsearch:
+      cluster-nodes: argalephdockertu2:9300
 
   jpa:
     hibernate.ddl-auto: none

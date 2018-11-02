@@ -206,6 +206,10 @@ spring:
     show-sql: false
     database-platform: org.hibernate.dialect.Oracle9Dialect
 
+  data:
+    elasticsearch:
+      cluster-nodes: argalephdockerd1:9300 
+  
   oauth2:
     resource:
       userInfoUri: ${aleph.oauth.uri}/user
