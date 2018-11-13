@@ -14,6 +14,7 @@ aleph:
     prebilling: 18160
     programming: 18170
     title: 18180
+    title-catalog: 18180
     config: 18190
     branding: 18200
     log: 18220
@@ -41,6 +42,7 @@ aleph:
     prebilling: 18162
     programming: 18172
     title: 18182
+    title-catalog: 18183
     branding: 18202
     log: 18222
     support: 18232
@@ -67,6 +69,11 @@ aleph:
     context-path: /title
     api-path: /api/v1
     uri: http://title.aleph.turner.com${aleph.title.context-path}
+
+  title:
+    context-path: /title-catalog
+    api-path: /api/v1
+    uri: http://title-catalog.aleph.turner.com${aleph.title-catalog.context-path}
 
   support:
     context-path: /support
