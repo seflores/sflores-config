@@ -73,7 +73,7 @@ aleph:
   title-catalog:
     context-path: /title-catalog
     api-path: /api/v1
-    uri: http://title-catalog.preprod.aleph.turner.com${aleph.title-catalog.context-path}
+    uri: http://catalog.preprod.aleph.turner.com${aleph.title-catalog.context-path}
 
   support:
     context-path: /support
