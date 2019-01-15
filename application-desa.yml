@@ -164,7 +164,7 @@ aleph:
 ---
 feign:
   hystrix:
-    enabled: false
+    enabled: true
 ribbon:
   eureka:
         enabled: false
