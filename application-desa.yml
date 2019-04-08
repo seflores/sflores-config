@@ -30,6 +30,7 @@ aleph:
     vod: 18270
     report: 18280
     officeService: 18300
+    freetv-preorders: 18310
 
 
     commondb: 1521
@@ -55,6 +56,7 @@ aleph:
     orders: 18262
     vod: 18272
     report: 18282
+    freetv-preorders: 18312
 
   db:
     host: db.turner.dev.redb.ee
@@ -166,10 +168,15 @@ aleph:
     programming:
       uri: http://argalephdockerdpp:19300/
 
+  freetv-preorders:
+    context-path: /freetv/preorders
+    api-path: /api/v1
+    uri: http://argalephdockerd1:${aleph.port.freetv-preorders}${aleph.freetv-preorders.context-path}
+
 ---
 feign:
   hystrix:
-    enabled: false
+    enabled: true
 ribbon:
   eureka:
         enabled: false
