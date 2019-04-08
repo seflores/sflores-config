@@ -76,7 +76,7 @@ aleph:
   finance:
     context-path: /finance
     api-path: /api/v2
-    uri: http://localhost:${aleph.port.finance}${aleph.finance.context-path}
+    uri: http://argalephdockerd1:${aleph.port.finance}${aleph.finance.context-path}
 
   title:
     context-path: /title
