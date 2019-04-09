@@ -67,6 +67,11 @@ aleph:
       host: localhost
       port: 6379
 
+  finance:
+    context-path: /finance
+    api-path: /api/v2
+    uri: http://argalephdockertu2:${aleph.port.finance}${aleph.finance.context-path}
+
   title:
     context-path: /title
     api-path: /api/v1

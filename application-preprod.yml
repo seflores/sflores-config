@@ -65,6 +65,11 @@ aleph:
       host: argalephdockertpp2
       port: 6379
 
+  finance:
+    context-path: /finance
+    api-path: /api/v2
+    uri: http://argalephdockertpp2:${aleph.port.finance}${aleph.finance.context-path}
+
   title:
     context-path: /title
     api-path: /api/v1
