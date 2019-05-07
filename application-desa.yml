@@ -84,7 +84,7 @@ aleph:
     uri: http://argalephdockerd1:${aleph.port.title}${aleph.title.context-path}
 
   title-catalog:
-    context-path: /title-catalog
+    context-path: /title
     api-path: /api/v1
     uri: http://argalephdockerd1:${aleph.port.title-catalog}${aleph.title-catalog.context-path}
 
@@ -124,6 +124,7 @@ aleph:
     api-path-tvc: Prod/TurnerLatam.svc/json
     api-path-longform: Longform/longformService/staging/v1
     api-path-vod: ${aleph.clearproxy.base}/PFT.Clear.API
+    api-path-promo: Promo/PromoService/v1/
     uri: ${aleph.clearproxy.base}${aleph.clearproxy.context-path}
 
   adsales:
