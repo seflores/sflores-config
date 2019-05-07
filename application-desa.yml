@@ -73,6 +73,11 @@ aleph:
       host: localhost
       port: 6379
 
+  finance:
+    context-path: /finance
+    api-path: /api/v2
+    uri: http://argalephdockerd1:${aleph.port.finance}${aleph.finance.context-path}
+
   title:
     context-path: /title
     api-path: /api/v1
@@ -119,6 +124,7 @@ aleph:
     api-path-tvc: Prod/TurnerLatam.svc/json
     api-path-longform: Longform/longformService/staging/v1
     api-path-vod: ${aleph.clearproxy.base}/PFT.Clear.API
+    api-path-promo: Promo/PromoService/v1/
     uri: ${aleph.clearproxy.base}${aleph.clearproxy.context-path}
 
   adsales:
@@ -162,6 +168,11 @@ aleph:
   predictive:
     programming:
       uri: http://argalephdockerdpp:19300/
+      
+  eip-external:
+    context-path: /eip/external
+    api-path: /api/v1
+    uri: http://argalephdockerd1:${aleph.port.eip-external}${aleph.eip-external.context-path}
 
   freetv-preorders:
     context-path: /freetv/preorders
