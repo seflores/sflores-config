@@ -118,7 +118,7 @@ aleph:
 
   adsales-freetv:
     context-path: /adsales
-    api-path: /api/v1
+    api-path: /api/v2
     uri: http://argalephdockerd1:${aleph.port.adsales-freetv}${aleph.adsales-freetv.context-path}
 
   placer:
