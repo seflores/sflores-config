@@ -75,10 +75,10 @@ aleph:
   title:
     context-path: /title
     api-path: /api/v1
-    uri: http://title.test.aleph.turner.com${aleph.title.context-path}
+    uri: http://catalog.test.aleph.turner.com${aleph.title.context-path}
 
   title-catalog:
-    context-path: /title-catalog
+    context-path: /title
     api-path: /api/v1
     uri: http://catalog.test.aleph.turner.com${aleph.title-catalog.context-path}
 

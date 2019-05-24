@@ -73,10 +73,10 @@ aleph:
   title:
     context-path: /title
     api-path: /api/v1
-    uri: http://title.preprod.aleph.turner.com${aleph.title.context-path}
+    uri: http://catalog.preprod.aleph.turner.com${aleph.title.context-path}
 
   title-catalog:
-    context-path: /title-catalog
+    context-path: /title
     api-path: /api/v1
     uri: http://catalog.preprod.aleph.turner.com${aleph.title-catalog.context-path}
 
