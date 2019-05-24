@@ -161,7 +161,7 @@ aleph:
   eip-external:
     context-path: /eip/external
     api-path: /api/v1
-    uri: http://eip-external.test.aleph.turner.com${aleph.port.eip-external}${aleph.eip-external.context-path}
+    uri: http://eip-external.test.aleph.turner.com${aleph.eip-external.context-path}
 
 ---
 feign:
