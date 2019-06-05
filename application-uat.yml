@@ -158,6 +158,7 @@ aleph:
   predictive:
     programming:
       uri: http://argalephdockerppp:19300/
+      uri2: http://argalephdockerppp:19302/
 
 ---
 feign:
