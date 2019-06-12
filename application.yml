@@ -145,8 +145,12 @@ aleph:
     uri: http://argalephdockerd1:${aleph.port.officeService}
 
   predictive:
+    knn:
+      62: Tooncast
     programming:
-      uri: http://argalephdockerdpp:19300/
+      uri: http://argalephdockerppp:19300/
+      uriKnn: http://argalephdockerppp:19302/      
+
 
   eip-external:
     context-path: /eip/external
