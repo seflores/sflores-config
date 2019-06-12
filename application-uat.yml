@@ -156,9 +156,11 @@ aleph:
 
 
   predictive:
+    knn:
+      62: Tooncast
     programming:
       uri: http://argalephdockerppp:19300/
-      uri2: http://argalephdockerppp:19302/
+      uriKnn: http://argalephdockerppp:19302/
 
 ---
 feign:
