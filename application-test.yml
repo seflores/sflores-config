@@ -30,6 +30,7 @@ aleph:
     clearproxy: 8080
     commondb: 1521
     freetv-preorders: 18310
+    entity: 18290
 
   frontport:
     oauth: 18082
@@ -53,6 +54,7 @@ aleph:
     vod: 18272
     report: 18282
     freetv-preorders: 18312
+    entity: 18292
 
   db:
     host: db.turner.dev.redb.ee
