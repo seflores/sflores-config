@@ -132,7 +132,7 @@ aleph:
 
   adsales-freetv:
     context-path: /adsales
-    api-path: /api/v1
+    api-path: /api/v2
     uri: http://freetv.test.aleph.turner.com${aleph.adsales-freetv.context-path}
 
   placer:
