@@ -149,6 +149,7 @@ aleph:
   predictive:
     knn:
       62: Tooncast
+      BOLA: BOOMLA
     programming:
       uri: http://argalephdockerppp:19300/
       uriKnn: http://argalephdockerppp:19302/      
