@@ -69,7 +69,7 @@ aleph:
     
   oauth:
     context-path: /aleph-oauth
-    uri: http://argalephdockerd1:${aleph.port.oauth}${aleph.oauth.context-path}
+    uri: http://10.161.237.174:${aleph.port.oauth}${aleph.oauth.context-path}
     redis:
       enabled: false
       host: localhost
@@ -83,42 +83,42 @@ aleph:
   title:
     context-path: /title
     api-path: /api/v1
-    uri: http://argalephdockerd1:${aleph.port.title}${aleph.title.context-path}
+    uri: http://10.161.237.174:${aleph.port.title}${aleph.title.context-path}
 
   title-catalog:
     context-path: /title
     api-path: /api/v1
-    uri: http://argalephdockerd1:${aleph.port.title-catalog}${aleph.title-catalog.context-path}
+    uri: http://10.161.237.174:${aleph.port.title-catalog}${aleph.title-catalog.context-path}
 
   support:
     context-path: /support
     api-path: /api/v1
-    uri: http://argalephdockerd1:${aleph.port.support}${aleph.support.context-path}
+    uri: http://10.161.237.174:${aleph.port.support}${aleph.support.context-path}
 
   programming:
     context-path: /programming
     api-path: /api/v1
-    uri: http://argalephdockerd1:${aleph.port.programming}${aleph.programming.context-path}
+    uri: http://10.161.237.174:${aleph.port.programming}${aleph.programming.context-path}
 
   media:
     context-path: /media
     api-path: /api/v1
-    uri: http://argalephdockerd1:${aleph.port.media}${aleph.media.context-path}
+    uri: http://10.161.237.174:${aleph.port.media}${aleph.media.context-path}
 
   log:
     context-path: /log
     api-path: /api/v1
-    uri: http://argalephdockerd1:${aleph.port.log}${aleph.log.context-path}
+    uri: http://10.161.237.174:${aleph.port.log}${aleph.log.context-path}
 
   rights:
     context-path: /rights
     api-path: /api/v1
-    uri: http://argalephdockerd1:${aleph.port.rights}${aleph.rights.context-path}
+    uri: http://10.161.237.174:${aleph.port.rights}${aleph.rights.context-path}
 
   branding:
     context-path: /branding
     api-path: /api/v1
-    uri: http://argalephdockerd1:${aleph.port.branding}${aleph.branding.context-path}
+    uri: http://10.161.237.174:${aleph.port.branding}${aleph.branding.context-path}
 
   clearproxy:
     base: http://argalephdockertu1:${aleph.port.clearproxy}
@@ -132,40 +132,40 @@ aleph:
   adsales:
     context-path: /adsales
     api-path: /api/v1
-    uri: http://argalephdockerd1:${aleph.port.adsales}${aleph.adsales.context-path}
+    uri: http://10.161.237.174:${aleph.port.adsales}${aleph.adsales.context-path}
 
   adsales-freetv:
     context-path: /adsales
     api-path: /api/v2
-    uri: http://argalephdockerd1:${aleph.port.adsales-freetv}${aleph.adsales-freetv.context-path}
+    uri: http://10.161.237.174:${aleph.port.adsales-freetv}${aleph.adsales-freetv.context-path}
 
   placer:
     context-path: /placer
     api-path: /api/v1
-    uri: http://argalephdockerd1:${aleph.port.placer}${aleph.placer.context-path}
+    uri: http://10.161.237.174:${aleph.port.placer}${aleph.placer.context-path}
 
   orders:
     context-path: /orders
     api-path: /api/v1
-    uri: http://argalephdockerd1:${aleph.port.orders}${aleph.orders.context-path}    
+    uri: http://10.161.237.174:${aleph.port.orders}${aleph.orders.context-path}    
     
   vod:
     context-path: /vod
     api-path: /api/v1
-    uri: http://argalephdockerd1:${aleph.port.vod}${aleph.vod.context-path}
+    uri: http://10.161.237.174:${aleph.port.vod}${aleph.vod.context-path}
     
   prebilling:
     context-path: /prebilling
     api-path: /api/v1
-    uri: http://argalephdockerd1:${aleph.port.prebilling}${aleph.prebilling.context-path}
+    uri: http://10.161.237.174:${aleph.port.prebilling}${aleph.prebilling.context-path}
 
   officeMail:
-    uri: http://argalephdockerd1:${aleph.port.officeService}
+    uri: http://10.161.237.174:${aleph.port.officeService}
 
   report:
     context-path: /report
     api-path: /api/v1
-    uri: http://argalephdockerd1:${aleph.port.report}${aleph.report.context-path}
+    uri: http://10.161.237.174:${aleph.port.report}${aleph.report.context-path}
 
   predictive:
     programming:
@@ -174,12 +174,12 @@ aleph:
   freetv-preorders:
     context-path: /freetv/preorders
     api-path: /api/v1
-    uri: http://argalephdockerd1:${aleph.port.freetv-preorders}${aleph.freetv-preorders.context-path}
+    uri: http://10.161.237.174:${aleph.port.freetv-preorders}${aleph.freetv-preorders.context-path}
 
   eip-external:
     context-path: /eip/external
     api-path: /api/v1
-    uri: http://argalephdockerd1:${aleph.port.eip-external}${aleph.eip-external.context-path}
+    uri: http://10.161.237.174:${aleph.port.eip-external}${aleph.eip-external.context-path}
 
 ---
 feign:
